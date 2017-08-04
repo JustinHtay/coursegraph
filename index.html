@@ -43,14 +43,16 @@
     {from: 3, to: 3}
   ]);
   */
-
-   $.getJSON("./test_result.json", function(data) {
-      var nodes = JSON.stringify(data);
+   $(document).ready(function() {
+      $.getJSON("./test_result.json", function(data) {
+         document.write(data.identifier);
+         var nodes = JSON.stringify(data);
+      });
    });
   // create a network
   var container = document.getElementById("mynetwork");
   var data = {
-    nodes: identifier,
+    nodes: identifier
     //edges: edges
   };
   var options = {};
