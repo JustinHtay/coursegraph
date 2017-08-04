@@ -1,0 +1,6 @@
+[submodule "Grouch"]
+	path = Grouch
+	url = https://github.com/gttools/Grouch.git
+[submodule "vis"]
+	path = vis
+	url = https://github.com/almende/vis.git
