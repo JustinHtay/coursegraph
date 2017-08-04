@@ -44,8 +44,9 @@
   ]);
   */
 
-   var nodes = new vis.DataSet($.getJSON("./test_result.json"););
-
+   $.getJSON("./test_result.json", function(data) {
+      var nodes = JSON.stringify(data);
+   });
   // create a network
   var container = document.getElementById("mynetwork");
   var data = {
