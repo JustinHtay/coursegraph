@@ -2,7 +2,7 @@
 <html>
 <head>
    <title>Network | Basic usage</title>
-
+   <script type="text/javascript" src="./jquery/src/jquery.js"></script>
    <script type="text/javascript" src="./vis/dist/vis.js"></script>
    <link href="./vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
 
@@ -24,6 +24,8 @@
 
 <script type="text/javascript">
   // create an array with nodes
+  
+  /* 
   var nodes = new vis.DataSet([
     {id: 1, label: 'Node 1'},
     {id: 2, label: 'Node 2'},
@@ -40,12 +42,15 @@
     {from: 2, to: 5},
     {from: 3, to: 3}
   ]);
+  */
+
+   var nodes = new vis.DataSet($.getJSON("./test_result.json"););
 
   // create a network
   var container = document.getElementById("mynetwork");
   var data = {
     nodes: nodes,
-    edges: edges
+    //edges: edges
   };
   var options = {};
   var network = new vis.Network(container, data, options);
