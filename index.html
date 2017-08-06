@@ -63,13 +63,36 @@
    }
    dat = JSON.stringify(dat);
    dat = dat.split("\"fullname\":").join("\"label\":");
+   dat = dat.split("\"identifier\":").join("\"id\":");
    dat = JSON.parse(dat);
-   var nodes = new vis.DataSet(dat);
-  // create a network
+
+   var ids = dat.map(function(a) {return a.id;});
+
+   //create nodes
+   var nodeSet = new vis.DataSet(dat);
+
+   //create edges
+   var edges = [];
+   for(var i = 0; i < dat.length; i++) {
+      if(dat[i].hasOwnProperty("prerequisites")) {
+         var prereq = (dat[i].prerequisites.courses);
+         for(var j = 0; j < prereq.length; j++) {
+            for(var k = 0; k < prereq[j].length; k++) {
+
+               if(ids.includes(prereq[j].courses[k])) {
+                  edges.push({from: prereq[j].courses[k], to: dat[i].id});
+               }
+            }
+         }
+      }
+   }
+   var edgeSet = new vis.DataSet(edges);
+
+   // create a network
    var container = document.getElementById("mynetwork");
    var data = {
-      nodes: nodes
-    //edges: edges
+      nodes: nodeSet,
+      edges: edgeSet
    };
    var options = {
       nodes: {
