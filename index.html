@@ -3,6 +3,7 @@
 <head>
    <title>Network | Basic usage</title>
    <script type="text/javascript" src="./vis/dist/vis.js"></script>
+   <script type="text/javascript" src="./test_result.json"></script>
    <link href="./vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
 
    <style type="text/css">
@@ -23,8 +24,8 @@
 
 <script type="text/javascript">
   // create an array with nodes
-  
-  var nodes = new vis.DataSet([
+ /* 
+  var elements = new vis.DataSet([
     {id: 1, label: 'Node 1'},
     {id: 2, label: 'Node 2'},
     {id: 3, label: 'Node 3'},
@@ -40,15 +41,20 @@
     {from: 2, to: 5},
     {from: 3, to: 3}
   ]);
-  //var nodes = new vis.DataSet(JSON.parse(dat));
+  */
+  var nodes = new vis.DataSet(dat);
   // create a network
   var container = document.getElementById("mynetwork");
   var data = {
-    nodes: identifier
-    edges: edges
+    nodes: nodes
+    //edges: edges
   };
-  var options = {};
+   var options = {
+      nodes: {
+      }
+   };
   var network = new vis.Network(container, data, options);
+  
 </script>
 
 
