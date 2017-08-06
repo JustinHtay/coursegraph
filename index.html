@@ -8,9 +8,9 @@
 
    <style type="text/css">
      #mynetwork {
-      width: 600px;
-      height: 400px;
-      border: 1px solid lightgray;
+      width: 1800px;
+      height: 1200px;
+      border: 3px solid lightgray;
    }
    </style>
 </head>
@@ -42,18 +42,40 @@
     {from: 3, to: 3}
   ]);
   */
-  var nodes = new vis.DataSet(dat);
+  //dat = JSON.parse(dat);
+   //strip out special topics, undergrad research
+   for(var i = dat.length-1; i>-1; i--){
+      if((dat[i].fullname).includes("Special Topics") || (dat[i].fullname).includes("Special Problems") || (dat[i].fullname).includes("Undergrad")) {
+         dat.splice(i,1);
+      }
+      //if the class hasn't been taught, delete
+      else if(dat[i].hasOwnProperty("section")) {
+         dat.splice(i,1);
+      }
+      //delete classes with an X in them
+      else if((dat[i].fullname).split(" ")[1].includes("X")) {
+         dat.splice(i,1);
+      }
+      //if it's not taught on atlanta campus, delete
+      else if(dat[i].hasOwnProperty("restrictions") && !(dat[i].restrictions.Campuses.requirements[0].includes("Atlanta"))) {
+         dat.splice(i,1);
+      }
+   }
+   dat = JSON.stringify(dat);
+   dat = dat.split("\"fullname\":").join("\"label\":");
+   dat = JSON.parse(dat);
+   var nodes = new vis.DataSet(dat);
   // create a network
-  var container = document.getElementById("mynetwork");
-  var data = {
-    nodes: nodes
+   var container = document.getElementById("mynetwork");
+   var data = {
+      nodes: nodes
     //edges: edges
-  };
+   };
    var options = {
       nodes: {
       }
    };
-  var network = new vis.Network(container, data, options);
+   var network = new vis.Network(container, data, options);
   
 </script>
 
