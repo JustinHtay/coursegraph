@@ -1,21 +1,19 @@
-var highlightActive = false;
-function draw(nodes, edges, options) {
-   var container = document.getElementById("mynetwork");
-   var data = {
-      nodes: nodes,
-      edges: edges
-   }
-   var network = new vis.Network(container, data, options);
-   var allNodes = nodes.get({returnType:"Object"});
-   network.on("click", neighborhoodHighlight);
-}
-
-function neighborhoodHighlight(params) {
+function draw() {
+      var container = document.getElementById("mynetwork");
+      var data = {
+         nodes: nodeSet,
+         edges: edgeSet
+      }
+      network = new vis.Network(container, data, options);
+      allNodes = nodeSet.get({returnType:"Object"});
+	  network.on("click",neighborhoodHighlight);
+	}
+	function neighborhoodHighlight(params) {
    if(params.nodes.length > 0) {
       highlightActive = true;
       var i,j;
       var selectedNode = params.nodes[0];
-      var degrees = 2;
+      var degrees = 1;
    
 
       //mark nodes as hard to read
@@ -29,20 +27,6 @@ function neighborhoodHighlight(params) {
       var connectedNodes = network.getConnectedNodes(selectedNode);
       var allConnectedNodes = [];
 
-      //get connected nodes
-      for(i = 1; i < degrees; i++) {
-         for(j = 0; j < connectedNodes.length; j++) {
-            allConnectedNodes = allConnectedNodes.concat(network.getConnectedNodes(connectedNodes[j]));
-         }
-      }
-      //change color of second degree nodes
-      for(i = 0; i < allConnectedNodes.length; i++) {
-         allNodes[allConnectedNodes[i]].color = 'rgba(150,150,150,0.75)';
-         if(allNodes[allConnectedNodes[i]].hiddenLabel !== undefined) {
-            allNodes[allConnectedNodes[i]].label = allNodes[allConnectedNodes[i]].hiddenLabel;
-            allNodes[allConnectedNodes[i]].hiddenLabel = undefined;
-         }
-      }
       //first degree nodes
       for(i = 0; i < connectedNodes.length; i++) {
          allNodes[connectedNodes[i]].color = undefined;
@@ -75,6 +59,5 @@ function neighborhoodHighlight(params) {
          updateArray.push(allNodes[nodeId]);
       }
    }
-   nodes.update(updateArray);
+   nodeSet.update(updateArray);
 }
-
