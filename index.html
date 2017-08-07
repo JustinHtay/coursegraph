@@ -9,8 +9,8 @@
 
    <style type="text/css">
      #mynetwork {
-      width: 1800px;
-      height: 1200px;
+      width: 1000px;
+      height: 600px;
       border: 3px solid lightgray;
    }
    </style>
@@ -24,56 +24,15 @@
 <div id="mynetwork"></div>
 
 <script type="text/javascript">
-  // create an array with nodes
- /* 
-  var elements = new vis.DataSet([
-    {id: 1, label: 'Node 1'},
-    {id: 2, label: 'Node 2'},
-    {id: 3, label: 'Node 3'},
-    {id: 4, label: 'Node 4'},
-    {id: 5, label: 'Node 5'}
-  ]);
-
-  // create an array with edges
-  var edges = new vis.DataSet([
-    {from: 1, to: 3},
-    {from: 1, to: 2},
-    {from: 2, to: 4},
-    {from: 2, to: 5},
-    {from: 3, to: 3}
-  ]);
-  */
-  //dat = JSON.parse(dat);
-  /*
-   //strip out special topics, undergrad research
-   for(var i = dat.length-1; i>-1; i--){
-      if((dat[i].fullname).includes("Special Topics") || (dat[i].fullname).includes("Special Problems") || (dat[i].fullname).includes("Undergrad")) {
-         dat.splice(i,1);
-      }
-      //if the class hasn't been taught, delete
-      else if(dat[i].hasOwnProperty("section")) {
-         dat.splice(i,1);
-      }
-      //delete classes with an X in them
-      else if((dat[i].fullname).split(" ")[1].includes("X")) {
-         dat.splice(i,1);
-      }
-      //if it's not taught on atlanta campus, delete
-      else if(dat[i].hasOwnProperty("restrictions") && !(dat[i].restrictions.Campuses.requirements[0].includes("Atlanta"))) {
-         dat.splice(i,1);
-      }
-   }
-   */
-   var dat = nodes;
-   dat = JSON.stringify(dat);
-   dat = dat.split("\"fullname\":").join("\"label\":");
-   dat = dat.split("\"identifier\":").join("\"id\":");
-   dat = JSON.parse(dat);
+   nodes = JSON.stringify(nodes);
+   nodes = nodes.split("\"fullname\":").join("\"label\":");
+   nodes = nodes.split("\"identifier\":").join("\"id\":");
+   nodes = JSON.parse(nodes);
 
    //var ids = dat.map(function(a) {return a.id;});
 
    //create nodes
-   var nodeSet = new vis.DataSet(dat);
+   var nodeSet = new vis.DataSet(nodes);
 
    //create edges
    var edgeSet = new vis.DataSet(edges);
@@ -84,9 +43,36 @@
       nodes: nodeSet,
       edges: edgeSet
    };
+   /*
    var options = {
+      layout: {
+         nodeSeparation: 100,
+         levelSeparation: 50,
+         direction: 'UD',
+         enabled: true,
+         sortMethod: 'directed'
+      },
       nodes: {
+      },
+      physics: {
+         enabled: true,
+         hierarchicalRepulsion: {
+            nodeDistance: 100,
+            springLength: 120
+         }
+      },
+      edges: {
+         length: 100
       }
+   };
+   */
+   var options = {
+      layout: {
+         hierarchical: {
+            direction:"UD"
+         }
+      },
+      physics:false
    };
    var network = new vis.Network(container, data, options);
   

@@ -12,7 +12,7 @@ function edgeGen(fname, outname)
         end       
     end
     edges(~ismember(edges(:,2), edges(:,1)), :) = [];
-    json = struct('from', edges(:,2), 'to', edges(:,1));
+    json = struct('from', edges(:,2), 'to', edges(:,1), 'arrows', 'to');
     strjson = savejson('', json);
     strjson = ['var edges = ', strjson(2:end-3), ';'];
     fh = fopen(outname, 'w');
