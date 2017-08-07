@@ -3,7 +3,8 @@
 <head>
    <title>Network | Basic usage</title>
    <script type="text/javascript" src="./vis/dist/vis.js"></script>
-   <script type="text/javascript" src="./test_result.json"></script>
+   <script type="text/javascript" src="./jsonlab-1.1/edges.js"></script>
+   <script type="text/javascript" src="./jsonlab-1.1/nodes.js"></script>
    <link href="./vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
 
    <style type="text/css">
@@ -43,6 +44,7 @@
   ]);
   */
   //dat = JSON.parse(dat);
+  /*
    //strip out special topics, undergrad research
    for(var i = dat.length-1; i>-1; i--){
       if((dat[i].fullname).includes("Special Topics") || (dat[i].fullname).includes("Special Problems") || (dat[i].fullname).includes("Undergrad")) {
@@ -61,31 +63,19 @@
          dat.splice(i,1);
       }
    }
+   */
+   var dat = nodes;
    dat = JSON.stringify(dat);
    dat = dat.split("\"fullname\":").join("\"label\":");
    dat = dat.split("\"identifier\":").join("\"id\":");
    dat = JSON.parse(dat);
 
-   var ids = dat.map(function(a) {return a.id;});
+   //var ids = dat.map(function(a) {return a.id;});
 
    //create nodes
    var nodeSet = new vis.DataSet(dat);
 
    //create edges
-   var edges = [];
-   for(var i = 0; i < dat.length; i++) {
-      if(dat[i].hasOwnProperty("prerequisites")) {
-         var prereq = (dat[i].prerequisites.courses);
-         for(var j = 0; j < prereq.length; j++) {
-            for(var k = 0; k < prereq[j].length; k++) {
-
-               if(ids.includes(prereq[j].courses[k])) {
-                  edges.push({from: prereq[j].courses[k], to: dat[i].id});
-               }
-            }
-         }
-      }
-   }
    var edgeSet = new vis.DataSet(edges);
 
    // create a network
