@@ -6,6 +6,7 @@ function draw() {
       }
       network = new vis.Network(container, data, options);
       allNodes = nodeSet.get({returnType:"Object"});
+      allEdges = edgeSet.get({returnType:"Object"});
 	  network.on("click",neighborhoodHighlight);
 	}
 	function neighborhoodHighlight(params) {
@@ -26,14 +27,13 @@ function draw() {
       }
       var connectedNodes = network.getConnectedNodes(selectedNode);
       var allConnectedNodes = [];
-
       //first degree nodes
       for(i = 0; i < connectedNodes.length; i++) {
          allNodes[connectedNodes[i]].color = undefined;
          if(allNodes[connectedNodes[i]].hiddenLabel !== undefined) {
             allNodes[connectedNodes[i]].label = allNodes[connectedNodes[i]].hiddenLabel;
             allNodes[connectedNodes[i]].hiddenLabel = undefined;
-         }
+        }
       }
       //reset main node
       allNodes[selectedNode].color = undefined;
@@ -41,14 +41,23 @@ function draw() {
          allNodes[selectedNode].label = allNodes[selectedNode].hiddenLabel;
          allNodes[selectedNode].hiddenLabel = undefined;
       }
-   } else if (highlightActive == true) {
-      
+      var connectedEdges = network.getConnectedEdges(selectedNode);
+      for(var edgeId in allEdges) {
+         allEdges[edgeId].color = 'rgba(200,200,200,0.5)';
+      }
+      for(i = 0; i < connectedEdges.length; i++) {
+         allEdges[connectedEdges[i]].color = null;
+      }
+   } else if (highlightActive == true) { //reset     
       for(var nodeId in allNodes) {
          allNodes[nodeId].color = undefined; 
          if(allNodes[nodeId].hiddenLabel !== undefined) {
             allNodes[nodeId].label = allNodes[nodeId].hiddenLabel;
             allNodes[nodeId].hiddenLabel = undefined;
          }
+      }
+      for(var edgeId in allEdges) {
+         allEdges[edgeId].color = null;
       }
       highlightActive = false;
    }
@@ -60,4 +69,11 @@ function draw() {
       }
    }
    nodeSet.update(updateArray);
+   updateArray = [];
+   for(edgeId in allEdges) {
+      if(allEdges.hasOwnProperty(edgeId)) {
+         updateArray.push(allEdges[edgeId]);
+      }
+   }
+   edgeSet.update(updateArray);
 }
