@@ -9,7 +9,7 @@ function draw() {
       allEdges = edgeSet.get({returnType:"Object"});
 	  network.on("click",neighborhoodHighlight);
 	}
-	function neighborhoodHighlight(params) {
+function neighborhoodHighlight(params) {
    if(params.nodes.length > 0) {
       highlightActive = true;
       var i,j;
