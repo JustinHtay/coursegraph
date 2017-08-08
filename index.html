@@ -9,10 +9,10 @@
    <link href="./vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
 
    <style type="text/css">
-     #mynetwork {
-      width: 1000px;
-      height: 600px;
-      border: 3px solid lightgray;
+     .network {
+        border: 3px solid gray;
+        height: 90vh;
+        width: 90vw;
    }
    </style>
 </head>
@@ -21,9 +21,7 @@
 <p>
   Create a simple network with some nodes and edges.
 </p>
-
-<div id="mynetwork"></div>
-
+<div class="network" id="mynetwork"></div>
 <script type="text/javascript">
    nodes = JSON.stringify(nodes);
    nodes = nodes.split("\"fullname\":").join("\"label\":");
@@ -67,13 +65,6 @@
          }
       },
       physics: false
-      /*
-      physics: {
-         barnesHut: {
-            avoidOverlap: true
-         }
-      }
-      */
    };
    var network;
    var allNodes;
