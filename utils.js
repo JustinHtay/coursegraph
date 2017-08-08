@@ -8,6 +8,7 @@ function draw() {
       allNodes = nodeSet.get({returnType:"Object"});
       allEdges = edgeSet.get({returnType:"Object"});
 	  network.on("click",neighborhoodHighlight);
+     makeSearch();
 	}
 function neighborhoodHighlight(params) {
    if(params.nodes.length > 0) {
@@ -76,4 +77,23 @@ function neighborhoodHighlight(params) {
       }
    }
    edgeSet.update(updateArray);
+}
+
+
+
+//bootstrap stuff
+function makeSearch() {
+   var list = document.getElementById("classSearch");
+   for(var nodeId in allNodes) {
+      var opt = allNodes[nodeId].id;
+      var li = document.createElement("li");
+      var text = document.createTextNode(opt);
+      var link = document.createElement("a");
+      var fcn = "javascript:network.focus(\"" + nodeId + "\", {scale:1.5});"; 
+      link.href = fcn;
+      li.appendChild(text);
+      li.appendChild(link);
+      list.appendChild(li);
+   }
+
 }

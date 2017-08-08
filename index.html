@@ -2,20 +2,32 @@
 <html>
 <head>
    <title>Network | Basic usage</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <script type="text/javascript" src="./vis/dist/vis.js"></script>
+   <!-- Local Data Files -->
    <script type="text/javascript" src="./utils.js"></script>
    <script type="text/javascript" src="./jsonlab-1.1/edges.js"></script>
    <script type="text/javascript" src="./jsonlab-1.1/nodes.js"></script>
+   <!-- Bootstrap Stuff -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
    <link href="./vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
    <style type="text/css">
      .network {
         border: 3px solid gray;
         height: 90vh;
         width: 90vw;
         margin: 5%;
-   }
+      }
+      .scrollable-menu {
+         height: auto;
+         max-height:180px;
+         overflow-x:hidden;
+      }
    </style>
 </head>
 <body>
@@ -23,6 +35,16 @@
 <p>
   Create a simple network with some nodes and edges.
 </p>
+<div class="container">
+   <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" id="searchButton" type="button" data-toggle="dropdown">Available Classes
+         <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu scrollable-menu" id="classSearch">
+         
+      </ul>
+   </div>
+</div>
 <div class="network" id="mynetwork"></div>
 <script type="text/javascript">
    nodes = JSON.stringify(nodes);
@@ -71,7 +93,7 @@
    var network;
    var allNodes;
    var highlightActive = false;
-   draw();  
+   draw(); 
 </script>
 
 
