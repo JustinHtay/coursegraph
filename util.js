@@ -88,12 +88,13 @@ function makeSearch() {
    for(var nodeId in allNodes) {
       var opt = allNodes[nodeId].id;
       var li = document.createElement("li");
-      var text = document.createTextNode(opt);
+      var text = document.createTextNode(nodeId);
       var link = document.createElement("a");
       var fcn = "javascript:network.focus(\"" + nodeId + "\", {scale:1.0}); highlightNode(\"" + nodeId + "\");"; 
       link.href = fcn;
-      li.appendChild(text);
+      link.appendChild(text);
       li.appendChild(link);
+      console.log(li);
       list.appendChild(li);
    }
 
