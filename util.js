@@ -79,8 +79,9 @@ function neighborhoodHighlight(params) {
    edgeSet.update(updateArray);
 }
 
-
-
+function highlightNode(nodeId) {
+   neighborhoodHighlight({nodes:[nodeId]});
+}
 //bootstrap stuff
 function makeSearch() {
    var list = document.getElementById("classSearch");
@@ -89,7 +90,7 @@ function makeSearch() {
       var li = document.createElement("li");
       var text = document.createTextNode(opt);
       var link = document.createElement("a");
-      var fcn = "javascript:network.focus(\"" + nodeId + "\", {scale:1.5});"; 
+      var fcn = "javascript:network.focus(\"" + nodeId + "\", {scale:1.0}); highlightNode(\"" + nodeId + "\");"; 
       link.href = fcn;
       li.appendChild(text);
       li.appendChild(link);
