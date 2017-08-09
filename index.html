@@ -26,7 +26,7 @@
       }
       .scrollable-menu {
          height: auto;
-         max-height:180px;
+         max-height=180px;
          overflow-x:hidden;
       }
    </style>
@@ -37,13 +37,19 @@
   Create a simple network of classes with some nodes and edges.
 </p>
 <div class="container">
-   <div class="dropdown">
-      <button class="btn btn-primary dropdown-toggle" id="searchButton" type="button" data-toggle="dropdown">Available Classes
-         <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu scrollable-menu" id="classSearch">
-         
-      </ul>
+   <div class="row">
+      <div class="col-sm-12">
+         <div class="dropdown">
+            <div class="input-group" id="searchBar">
+               <input type="text" class="form-control" name="classSearch" id= "classSearch" onkeyup="myFunction();" placeholder="Search for courses"></input>
+            </div>
+            <button class= "btn btn-primary dropdown-toggle" id="searchButton" type="button" data-toggle="dropdown">Available Classes
+               <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu scrollable-menu" id="dropSearch">
+            </ul>
+         </div>
+      </div>
    </div>
 </div>
 <div class="network" id="mynetwork"></div>

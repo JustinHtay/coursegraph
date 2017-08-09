@@ -79,12 +79,27 @@ function neighborhoodHighlight(params) {
    edgeSet.update(updateArray);
 }
 
+function myFunction() {
+   var input = document.getElementById("classSearch").value.toUpperCase();
+   console.log(input);
+   var matches = [];
+   for(var nodeId in allNodes) {
+      if(nodeId.indexOf(input) > -1) {
+         matches.push(nodeId);
+      }
+   }
+   if(matches.length == 1) {
+      highlightNode(matches[0]);
+   }
+}
+
 function highlightNode(nodeId) {
    neighborhoodHighlight({nodes:[nodeId]});
 }
+
 //bootstrap stuff
 function makeSearch() {
-   var list = document.getElementById("classSearch");
+   var list = document.getElementById("dropSearch");
    for(var nodeId in allNodes) {
       var opt = allNodes[nodeId].id;
       var li = document.createElement("li");
@@ -94,7 +109,6 @@ function makeSearch() {
       link.href = fcn;
       link.appendChild(text);
       li.appendChild(link);
-      console.log(li);
       list.appendChild(li);
    }
 
