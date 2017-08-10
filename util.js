@@ -89,7 +89,9 @@ function myFunction() {
       }
    }
    if(matches.length == 1) {
+      network.focus(matches[0], {scale:1.0}); 
       highlightNode(matches[0]);
+      
    }
 }
 
