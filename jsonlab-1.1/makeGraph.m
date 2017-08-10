@@ -1,5 +1,6 @@
+clear; clc; close all; fclose all;
 addpath(genpath('./jsonlab'));
 disp('Making nodes...')
-nodeGen('test_result.json', 'nodes.js');
+nodeGen('result.json', 'all_nodes.js');
 disp('Making edges...')
-edgeGen('test_result.json', 'edges.js');
+edgeGen('result.json', 'all_edges.js');

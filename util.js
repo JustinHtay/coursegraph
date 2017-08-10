@@ -5,7 +5,7 @@ function draw() {
          edges: edgeSet
       }
       network = new vis.Network(container, data, options);
-      allNodes = nodeSet.get({returnType:"Object"});
+      allNodes = nodeSet.get({returnType:"Object", order:"id"});
       allEdges = edgeSet.get({returnType:"Object"});
 	  network.on("click",neighborhoodHighlight);
      makeSearch();
