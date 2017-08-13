@@ -16,7 +16,7 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-   <link href="./vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+   <link href="./resources/vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
    <style type="text/css">
    </style>
@@ -43,7 +43,7 @@
       </div>
          <div class="col-xs-6">
          <div class="form-group">
-            <input type="text" class="form-control" name="classSearch" id= "classSearch" onkeyup="myFunction();" placeholder="Search for courses"></input>
+            <input type="text" class="form-control" name="classSearch" id= "classSearch" onkeyup="matchSearch();" placeholder="Search for courses"></input>
          </div>
          </div>
       </div>
@@ -52,30 +52,21 @@
 <div class="network" id="mynetwork"></div>
 <script type="text/javascript">
    nodes = JSON.stringify(nodes);
-   nodes = nodes.split("\"fullname\":").join("\"label\":");
+   nodes = nodes.split("\"fullname\":").join("\"title\":");
    nodes = nodes.split("\"identifier\":").join("\"id\":");
+   //nodes = nodes.split("\"school\":").join("\"group\":");
    nodes = JSON.parse(nodes);
 
    for(var i = 0; i < nodes.length; i++) {
       nodes[i]["level"] = nodes[i].group;
-      //nodes[i]["nodeId"] = nodes[i].id;
+      nodes[i]["label"] = nodes[i].id;
    }
-
-   //var ids = dat.map(function(a) {return a.id;});
 
    //create nodes
    var nodeSet = new vis.DataSet(nodes);
 
    //create edges
    var edgeSet = new vis.DataSet(edges);
-   /*
-   // create a network
-   var container = document.getElementById("mynetwork");
-   var data = {
-      nodes: nodeSet,
-      edges: edgeSet
-   };
-   */
    var options = {
       layout: {
          improvedLayout: true,
@@ -83,7 +74,7 @@
             direction:"LR",
             sortMethod: "directed",
             nodeSpacing: 100,
-            levelSeparation: 300
+            levelSeparation: 150
          }
       },
       edges: {

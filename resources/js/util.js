@@ -79,12 +79,12 @@ function neighborhoodHighlight(params) {
    edgeSet.update(updateArray);
 }
 
-function myFunction() {
+function matchSearch() {
    var input = document.getElementById("classSearch").value.toUpperCase();
    console.log(input);
    var matches = [];
    for(var nodeId in allNodes) {
-      if(nodeId.indexOf(input) > -1) {
+      if((allNodes[nodeId].title).toUpperCase().indexOf(input) > -1) {
          matches.push(nodeId);
       }
    }
@@ -105,7 +105,7 @@ function makeSearch() {
    for(var nodeId in allNodes) {
       var opt = allNodes[nodeId].id;
       var li = document.createElement("li");
-      var text = document.createTextNode(allNodes[nodeId].label);
+      var text = document.createTextNode(allNodes[nodeId].title);
       var link = document.createElement("a");
       var fcn = "javascript:network.focus(\"" + nodeId + "\", {scale:1.0}); highlightNode(\"" + nodeId + "\");"; 
       link.href = fcn;

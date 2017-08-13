@@ -7,7 +7,7 @@ function nodeGen(fname, outname)
     for x = 1:length(data)
         st = data{x};
         [group, num] = strtok(data{x}.identifier);
-        if any(contains(data{x}.fullname,{'Special Topics', 'Special Problems', 'Undergrad'})) ...
+        if any(contains(data{x}.fullname,{'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'})) ...
             || ~isfield(data{x}, 'sections') ...
             || any(num == 'X') ...
             || str2num(num) > 5000 ...
@@ -24,7 +24,7 @@ function nodeGen(fname, outname)
     while ischar(line)
         if all(ind-linenum ~= 0)
             if length(line) > 20
-                line = [line(1:end-4), ', "group": ', groups{1}, line(end-3:end)];
+                line = [line(1:end-4), ', "level": ', groups{1}, line(end-3:end)];
                 groups(1) = [];
             end
             fprintf(fhout, line);
