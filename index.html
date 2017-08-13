@@ -1,25 +1,27 @@
 <!doctype html>
 <html>
 <head>
-   <title>Network | Basic usage</title>
+   <title>CourseGraph</title>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE-edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- visjs -->
    <script type="text/javascript" src="./resources/vis/dist/vis.js"></script>
+   <link href="./resources/vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+   
    <!-- Local Data Files -->
    <script type="text/javascript" src="./resources/js/util.js"></script>
    <script type="text/javascript" src="./resources/js/ece_edges.js"></script>
    <script type="text/javascript" src="./resources/js/ece_nodes.js"></script>
    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
+   
    <!-- Bootstrap Stuff -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-   <link href="./resources/vis/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
-   <style type="text/css">
-   </style>
 </head>
 <body>
 
@@ -43,7 +45,7 @@
       </div>
          <div class="col-xs-6">
          <div class="form-group">
-            <input type="text" class="form-control" name="classSearch" id= "classSearch" onkeyup="matchSearch();" placeholder="Search for courses"></input>
+            <input type="text" class="form-control" name="classSearch" id= "classSearch" onkeyup="matchSearch();" placeholder="Search for courses by number or name"></input>
          </div>
          </div>
       </div>

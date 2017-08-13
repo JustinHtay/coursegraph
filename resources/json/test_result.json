@@ -1,4 +1,4 @@
-[ 
+[
 {"restrictions": {"restrictions": ["Levels", "Campuses"], "Levels": {"positive": false, "requirements": ["Graduate Semester"]}, "Campuses": {"positive": true, "requirements": ["Georgia Tech-Atlanta *"]}}, "school": "ECE", "name": "Intro ECE Design", "fields": ["Grade Basis", "Restrictions"], "number": "1010", "hours": "0.000 OR     2.000 Credit hours", "grade_basis": "ALP", "semester": "201708", "fullname": "ECE 1010 - Intro ECE Design", "identifier": "ECE 1010"},
 {"restrictions": {"restrictions": ["Campuses"], "Campuses": {"positive": true, "requirements": ["Georgia Tech-Atlanta *"]}}, "school": "ECE", "name": "Transfer-Digital Des Lab", "fields": ["Grade Basis", "Restrictions"], "number": "20X2", "hours": "2.000 Credit hours", "grade_basis": "T", "semester": "201708", "fullname": "ECE 20X2 - Transfer-Digital Des Lab", "identifier": "ECE 20X2"},
 {"school": "ECE", "name": "Transfer-Digital Systems", "fields": ["Grade Basis"], "number": "20X3", "hours": "3.000 Credit hours", "grade_basis": "T", "semester": "201708", "fullname": "ECE 20X3 - Transfer-Digital Systems", "identifier": "ECE 20X3"},
