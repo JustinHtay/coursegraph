@@ -3,12 +3,16 @@
 %Written by Justin Htay
 %v1.0: 8/15/17
 
-function makeGraph(dataName, nodeName, edgeName)
+function makeGraph(varargin)
+    nodeName = varargin{1};
+    edgeName = varargin{2};
+    dataName = varargin{3};
     addpath(genpath('./jsonlab'));
     %Load the data in, either as a .mat file or as a .json file
     disp('Loading Data...')
     try
-        load(dataName);
+        matName = varargin{4};
+        load(matName);
     catch
         data = loadjson(dataName);
     end
@@ -51,8 +55,7 @@ function makeGraph(dataName, nodeName, edgeName)
         %characters, write it. Include the group and level fields.
         if all(ind-linenum ~= 0)
             if length(line) > 20
-                line = [line(1:end-4), ', "group": ', '"', groups{1}, '"',  ', "level": ', '"', level(1), '"',line(end-3:end)];
-                groups(1) = [];
+                line = [line(1:end-4), ', "group": ', '"', groups{linenum}, '"',  ', "level": ', '"', level(1), '"',line(end-3:end)];
                 level(1) = [];
             end
             fprintf(fhout, line);
@@ -65,7 +68,7 @@ function makeGraph(dataName, nodeName, edgeName)
     fclose(fhout);
     vec = 1:length(data);
     %delete the data that wasn't written
-    data(~ismember(vec, ind)) = [];
+    data(ismember(vec, ind)) = [];
     % time to make the edges
     disp('Making edges...')
         edges = [];
