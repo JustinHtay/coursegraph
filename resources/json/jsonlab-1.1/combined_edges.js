@@ -27,7 +27,17 @@ var edges =
 		},
 		{
 			"from": "CS 3600",
+			"to": "CS 4731",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 3600",
 			"to": "CS 4635",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 4641",
 			"arrows": "to"
 		},
 		{
@@ -121,6 +131,16 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "CS 2110",
+			"to": "CS 4605",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2261",
+			"to": "CS 4605",
+			"arrows": "to"
+		},
+		{
 			"from": "MATH 1553",
 			"to": "CS 4476",
 			"arrows": "to"
@@ -161,6 +181,36 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "CS 3451",
+			"to": "CS 4455",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 4460",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 4400",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 4400",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1371",
+			"to": "CS 4400",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 4290",
+			"arrows": "to"
+		},
+		{
 			"from": "CS 2340",
 			"to": "CS 4240",
 			"arrows": "to"
@@ -178,6 +228,11 @@ var edges =
 		{
 			"from": "CS 3210",
 			"to": "CS 4210",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 4261",
 			"arrows": "to"
 		},
 		{
@@ -271,6 +326,36 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "CS 1331",
+			"to": "CS 2340",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1371",
+			"to": "CS 2316",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 2316",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 2316",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2110",
+			"to": "CS 2200",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 2110",
+			"arrows": "to"
+		},
+		{
 			"from": "CS 3510",
 			"to": "CS 4650",
 			"arrows": "to"
@@ -278,6 +363,11 @@ var edges =
 		{
 			"from": "CS 3511",
 			"to": "CS 4650",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 4641",
 			"arrows": "to"
 		},
 		{
@@ -296,8 +386,88 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "CS 2110",
+			"to": "CS 4605",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2261",
+			"to": "CS 4605",
+			"arrows": "to"
+		},
+		{
 			"from": "CS 4400",
 			"to": "CS 4440",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 3510",
+			"to": "CS 4540",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 3511",
+			"to": "CS 4540",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3012",
+			"to": "CS 4540",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3215",
+			"to": "CS 4540",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3225",
+			"to": "CS 4540",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3670",
+			"to": "CS 4540",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 4460",
+			"arrows": "to"
+		},
+		{
+			"from": "ECE 2031",
+			"to": "CS 3651",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 3510",
+			"to": "CS 4510",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 3511",
+			"to": "CS 4510",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3012",
+			"to": "CS 4510",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3215",
+			"to": "CS 4510",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3225",
+			"to": "CS 4510",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3670",
+			"to": "CS 4510",
 			"arrows": "to"
 		},
 		{
@@ -308,6 +478,156 @@ var edges =
 		{
 			"from": "CS 4400",
 			"to": "CS 4365",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 3600",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 3451",
+			"to": "CS 4455",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2050",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2051",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3012",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 4400",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 4400",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1371",
+			"to": "CS 4400",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2340",
+			"to": "CS 3312",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2340",
+			"to": "CS 3311",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 4290",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 3251",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 2340",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 2261",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2110",
+			"to": "CS 2200",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1371",
+			"to": "CS 2316",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 2316",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 2316",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 2110",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 1332",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 1331",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 1331",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1371",
+			"to": "CS 1331",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 1171",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 1171",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 4261",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2340",
+			"to": "CS 4240",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 4235",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 3210",
+			"to": "CS 4210",
 			"arrows": "to"
 		},
 		{
@@ -328,6 +648,136 @@ var edges =
 		{
 			"from": "MATH 3012",
 			"to": "CS 3511",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 3630",
+			"arrows": "to"
+		},
+		{
+			"from": "ECE 2031",
+			"to": "CS 3651",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 3600",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 3251",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2050",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2051",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 3012",
+			"to": "CS 3510",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2340",
+			"to": "CS 3312",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 3220",
+			"arrows": "to"
+		},
+		{
+			"from": "ECE 2031",
+			"to": "CS 3220",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2340",
+			"to": "CS 3311",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2550",
+			"to": "CS 3451",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2551",
+			"to": "CS 3451",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2561",
+			"to": "CS 3451",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2110",
+			"to": "CS 3451",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2261",
+			"to": "CS 3451",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1332",
+			"to": "CS 3451",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2340",
+			"to": "CS 3451",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 2200",
+			"to": "CS 3210",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 1171",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 1171",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1331",
+			"to": "CS 1332",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1301",
+			"to": "CS 1331",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1315",
+			"to": "CS 1331",
+			"arrows": "to"
+		},
+		{
+			"from": "CS 1371",
+			"to": "CS 1331",
 			"arrows": "to"
 		},
 		{
@@ -606,6 +1056,16 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "MATH 2552",
+			"to": "MATH 4581",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2562",
+			"to": "MATH 4581",
+			"arrows": "to"
+		},
+		{
 			"from": "MATH 3215",
 			"to": "MATH 4280",
 			"arrows": "to"
@@ -721,6 +1181,16 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "MATH 1555",
+			"to": "MATH 4305",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 4305",
+			"arrows": "to"
+		},
+		{
 			"from": "MATH 4107",
 			"to": "MATH 4108",
 			"arrows": "to"
@@ -811,6 +1281,86 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "MATH 2551",
+			"to": "MATH 3670",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2561",
+			"to": "MATH 3670",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2550",
+			"to": "MATH 3670",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2551",
+			"to": "MATH 3215",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2561",
+			"to": "MATH 3215",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2550",
+			"to": "MATH 3215",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 3012",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 3012",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2550",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2550",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2603",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2603",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2552",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2552",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2551",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2551",
+			"arrows": "to"
+		},
+		{
 			"from": "MATH 1555",
 			"to": "MATH 2562",
 			"arrows": "to"
@@ -823,6 +1373,16 @@ var edges =
 		{
 			"from": "MATH 1552",
 			"to": "MATH 1564",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2603",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2603",
 			"arrows": "to"
 		},
 		{
@@ -856,6 +1416,16 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "MATH 1555",
+			"to": "MATH 2552",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2552",
+			"arrows": "to"
+		},
+		{
 			"from": "MATH 1550",
 			"to": "MATH 1555",
 			"arrows": "to"
@@ -863,6 +1433,66 @@ var edges =
 		{
 			"from": "MATH 1551",
 			"to": "MATH 1555",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2550",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2550",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2551",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2551",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1711",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1712",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1551",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1550",
+			"to": "MATH 1552",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1551",
+			"to": "MATH 1552",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1554",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1553",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 1553",
 			"arrows": "to"
 		},
 		{
@@ -893,6 +1523,31 @@ var edges =
 		{
 			"from": "MATH 4261",
 			"to": "MATH 4262",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2552",
+			"to": "MATH 4640",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2562",
+			"to": "MATH 4640",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2603",
+			"to": "MATH 4640",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2552",
+			"to": "MATH 4581",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2562",
+			"to": "MATH 4581",
 			"arrows": "to"
 		},
 		{
@@ -936,6 +1591,101 @@ var edges =
 			"arrows": "to"
 		},
 		{
+			"from": "MATH 4317",
+			"to": "MATH 4318",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2551",
+			"to": "MATH 4320",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2561",
+			"to": "MATH 4320",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2550",
+			"to": "MATH 4320",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2106",
+			"to": "MATH 4317",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 4305",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 4305",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2106",
+			"to": "MATH 4107",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1553",
+			"to": "MATH 3406",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1554",
+			"to": "MATH 3406",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1564",
+			"to": "MATH 3406",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2551",
+			"to": "MATH 3215",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2561",
+			"to": "MATH 3215",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2550",
+			"to": "MATH 3215",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2551",
+			"to": "MATH 3670",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2561",
+			"to": "MATH 3670",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 2550",
+			"to": "MATH 3670",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 3012",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 3012",
+			"arrows": "to"
+		},
+		{
 			"from": "MATH 1550",
 			"to": "MATH 1555",
 			"arrows": "to"
@@ -948,6 +1698,56 @@ var edges =
 		{
 			"from": "MATH 1113",
 			"to": "MATH 1550",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1712",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1555",
+			"to": "MATH 2106",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 2106",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1711",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1551",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1554",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1550",
+			"to": "MATH 1552",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1551",
+			"to": "MATH 1552",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1113",
+			"to": "MATH 1553",
+			"arrows": "to"
+		},
+		{
+			"from": "MATH 1552",
+			"to": "MATH 1553",
 			"arrows": "to"
 		}
 	];

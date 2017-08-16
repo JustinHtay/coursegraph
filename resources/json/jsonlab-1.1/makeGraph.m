@@ -8,7 +8,7 @@ function makeGraph(dataName, nodeName, edgeName)
     %Load the data in, either as a .mat file or as a .json file
     disp('Loading Data...')
     try
-        data = load(dataName);
+        load(dataName);
     catch
         data = loadjson(dataName);
     end
@@ -26,11 +26,12 @@ function makeGraph(dataName, nodeName, edgeName)
         %transfer course), is a graduate class (number > 5k), or isn't
         %taught at Atlanta campus, delete it. Otherwise, add it to list of
         %nodes and groups
-        if any(contains(data{x}.fullname,{'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'})) ...
+        if any(contains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'})) ...
             || ~isfield(data{x}, 'sections') ...
             || any(num == 'X') ...
             || str2num(num) > 5000 ...
             || (isfield(data{x}, 'restrictions') && isfield(data{x}.restrictions, 'Campuses') && ~contains(data{x}.restrictions.Campuses.requirements, 'Atlanta')) ...
+            || sum(strcmpi(data{x}.identifier, nodes) ~= 0)
             ind = [ind, x];
         else
             nodes = [nodes, data{x}.identifier];
