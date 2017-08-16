@@ -12,8 +12,8 @@
    
    <!-- Local Data Files -->
    <script type="text/javascript" src="./resources/js/util.js"></script>
-   <script type="text/javascript" src="./resources/js/ece_edges.js"></script>
-   <script type="text/javascript" src="./resources/js/ece_nodes.js"></script>
+   <script type="text/javascript" src="./resources/js/combined_edges.js"></script>
+   <script type="text/javascript" src="./resources/js/combined_nodes.js"></script>
    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
    
    <!-- Bootstrap Stuff -->
@@ -60,7 +60,7 @@
    nodes = JSON.parse(nodes);
 
    for(var i = 0; i < nodes.length; i++) {
-      nodes[i]["level"] = nodes[i].group;
+      //nodes[i]["level"] = nodes[i].group;
       nodes[i]["label"] = nodes[i].id;
    }
 
