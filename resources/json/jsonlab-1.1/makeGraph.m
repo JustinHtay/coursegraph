@@ -30,11 +30,18 @@ function makeGraph(varargin)
         %transfer course), is a graduate class (number > 5k), or isn't
         %taught at Atlanta campus, delete it. Otherwise, add it to list of
         %nodes and groups
-        if any(contains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'})) ...
+        %pre-2017 versions of MATLAB don't have contains(), so I wrote my
+        %own. I assume that MATLAB's version is better, so I default to it
+        try
+            check = any(contains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
+        catch
+            check = any(myContains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
+        end
+        if  check ...
             || ~isfield(data{x}, 'sections') ...
             || any(num == 'X') ...
             || str2num(num) > 5000 ...
-            || (isfield(data{x}, 'restrictions') && isfield(data{x}.restrictions, 'Campuses') && ~contains(data{x}.restrictions.Campuses.requirements, 'Atlanta')) ...
+            || (isfield(data{x}, 'restrictions') && isfield(data{x}.restrictions, 'Campuses') && isempty(strfind(data{x}.restrictions.Campuses.requirements, 'Atlanta'))) ...
             || sum(strcmpi(data{x}.identifier, nodes) ~= 0)
             ind = [ind, x];
         else
@@ -105,5 +112,13 @@ function out = allprereq(ca)
         else
             out = [out, ca{x}];
         end
+    end
+end
+% overwrite contains() for MATLAB versions below 2017
+function out = myContains(word, ca)
+    out = [];
+    for x = 1:length(ca)
+       newword = strrep(word, ca{x}, char(0));
+       out = [out, isequal(newword, word)]; 
     end
 end
