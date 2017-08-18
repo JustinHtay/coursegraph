@@ -101,8 +101,35 @@ function highlightNode(nodeId) {
 
 //bootstrap stuff
 function makeSearch() {
-   var list = document.getElementById("dropSearch");
+   var biglist = document.getElementById("schoolSearch");
+   var schools = []; 
+   var schoolMenu = [];
+   //separate the nodes into lists
    for(var nodeId in allNodes) {
+      var node = allNodes[nodeId];
+      var item = document.createElement("li");
+      var a = document.createElement("a");
+      var fcn = "javascript:network.focus(\"" + nodeId + "\", {scale:1.0}); highlightNode(\"" + nodeId + "\");"; 
+      a.href = fcn;
+      a.tabindex = "-1";
+      a.appendChild(document.createTextNode(node.title));
+      item.appendChild(a);
+      if(schools.indexOf(node.group) == -1) {
+         schools.push(node.group);
+         var list = document.createElement("ul");
+         
+         list.setAttribute("class","dropdown-menu col-xs-12 scrollable-menu");
+         list.appendChild(item);   
+         schoolMenu.push(list);
+      } else {
+         var ind = schools.indexOf(node.group);
+         var list = schoolMenu[ind];
+         list.appendChild(item);
+         schoolMenu[ind] = list;
+      }
+
+      //this works
+      /* 
       var opt = allNodes[nodeId].id;
       var li = document.createElement("li");
       var text = document.createTextNode(allNodes[nodeId].title);
@@ -112,6 +139,43 @@ function makeSearch() {
       link.appendChild(text);
       li.appendChild(link);
       list.appendChild(li);
+      */
    }
-
+   for(var ind = 0; ind < schoolMenu.length; ind++) {
+      /*
+      list = document.createElement("li");
+      mydiv = document.createElement("div");
+      mydiv.setAttribute("class", "col-xs-12 input-group dropdown input-group");
+      var span = document.createElement("span");
+      span.setAttribute("class", "input-group-btn");
+      var button = document.createElement("button");
+      button.setAttribute("class", "btn btn-primary btn-block dropdown-toggle");
+      button.type = "input-button";
+      button.setAttribute("data-toggle", "dropdown");
+      button.appendChild(document.createTextNode(schools[ind]));
+      var span2 = document.createElement("span");
+      span2.setAttribute("class", "caret");
+      button.appendChild(span2);
+      span.append(button);
+      span.append(schoolMenu[ind]);
+      mydiv.appendChild(span);
+      list.appendChild(mydiv);
+      biglist.append(list);
+      */
+      list = document.createElement("li");
+      var span = document.createElement("span");
+      span.setAttribute("class", "caret");
+      list.setAttribute("class","dropdown-submenu");
+      a = document.createElement("a");
+      a.href = "#";
+      a.tabindex = "-1";
+      a.appendChild(document.createTextNode(schools[ind]));
+      console.log(schools[ind]);
+      a.appendChild(span);
+      list.appendChild(a);
+      list.appendChild(schoolMenu[ind]);
+      biglist.append(list);
+      console.log(list);
+   }
+   console.log(biglist);
 }

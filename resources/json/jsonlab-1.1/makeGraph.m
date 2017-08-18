@@ -106,4 +106,16 @@ function out = allprereq(ca)
             out = [out, ca{x}];
         end
     end
+<<<<<<< Updated upstream
 end
+=======
+end
+% overwrite contains() for MATLAB versions below 2017
+function out = myContains(word, ca)
+    out = [];
+    for x = 1:length(ca)
+       newword = strrep(word, ca{x}, char(0));
+       out = [out, ~isequal(newword, word)]; 
+    end
+end
+>>>>>>> Stashed changes
