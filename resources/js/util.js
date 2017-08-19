@@ -1,17 +1,16 @@
 function draw(nodeSet, edgeSet) {
-      var container = document.getElementById("mynetwork");
-      var data = {
-         nodes: nodeSet,
-         edges: edgeSet
-      }
-      network = new vis.Network(container, data, options);
-      allNodes = nodeSet.get({returnType:"Object", order:"id"});
-      allEdges = edgeSet.get({returnType:"Object"});
-      console.log("allNodes");
-      console.log(allNodes);
-	  network.on("click",neighborhoodHighlight);
-     makeCourseSelect(allNodes);
-	}
+   var container = document.getElementById("mynetwork");
+   var data = {
+      nodes: nodeSet,
+      edges: edgeSet
+   }
+   network = new vis.Network(container, data, options);
+   allNodes = nodeSet.get({returnType:"Object", order:"id"});
+   allEdges = edgeSet.get({returnType:"Object"});
+   network.on("click",neighborhoodHighlight);
+   makeCourseSelect(allNodes);
+   makeSchoolSelect();
+}
 function neighborhoodHighlight(params) {
    if(params.nodes.length > 0) {
       highlightActive = true;
@@ -83,7 +82,6 @@ function neighborhoodHighlight(params) {
 
 function matchCourseSearch() {
    var input = document.getElementById("courseSearch").value.toUpperCase();
-   console.log(input);
    var matches = [];
    if(!schoolSelected) {
    for(var nodeId in allNodes) {
@@ -107,7 +105,6 @@ function matchCourseSearch() {
 
 function matchSchoolSearch() {
    var input = document.getElementById("schoolSearch").value.toUpperCase();
-   console.log(input);
    var matches = [];
    for(var i = 0; i < schools.length; i++) {
       if(schools[i].toUpperCase().indexOf(input) > -1) {
@@ -116,15 +113,15 @@ function matchSchoolSearch() {
    }
    if(matches.length == 1) {
       schoolSelected = true;
-      tempNodes = nodeSet.get({returnType:"Object", 
+      tempNodes = nodeSet.get({order:"id", returnType:"Object", 
          filter: function(item) {
             return(item.group==matches[0]);
          }
       });
-      console.log(tempNodes);
       makeCourseSelect(tempNodes);
    } else {
       schoolSelected = false;
+      makeCourseSelect(allNodes);
    }
 }
 
@@ -148,6 +145,32 @@ function makeCourseSelect(allNodes) {
       li.appendChild(link);
       list.appendChild(li);
    }
-   console.log(list);
 }
 
+function makeSchoolSelect() {
+   var list = document.getElementById("schoolSelect");
+   //make a reset option
+   var li = document.createElement("li");
+   var text = document.createTextNode("Reset Search");
+   var link = document.createElement("a");
+   var fcn = "javascript:var search = document.getElementById(\"schoolSearch\"); search.value = \"\"; matchSchoolSearch(); ";
+   link.href = fcn;
+   link.appendChild(text);
+   li.appendChild(link);
+   list.appendChild(li);
+
+   li = document.createElement("li");
+   li.setAttribute("class", "divider");
+   list.appendChild(li);
+   //populate with actual schools
+   for(var i = 0; i < schools.length; i++) {
+      li = document.createElement("li");
+      text = document.createTextNode(schools[i]);
+      link = document.createElement("a");
+      fcn = "javascript:var search = document.getElementById(\"schoolSearch\"); search.value = \"" + schools[i] + "\"; matchSchoolSearch(); ";
+      link.href = fcn;
+      link.appendChild(text);
+      li.appendChild(link);
+      list.appendChild(li);
+   }
+}
