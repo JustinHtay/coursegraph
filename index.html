@@ -29,15 +29,15 @@
   Create a simple network of classes with some nodes and edges.
 </p>
 <div class="container-fluid">
-   <div class="row">
+   <div class="row"> <!-- select a school -->
       <div class="col-xs-6">
-         <div class="input-group dropdown" id="searchBar">
+         <div class="input-group dropdown" id="schoolBlock">
          <span class="input-group-btn">
-           <button class= "btn btn-primary btn-block dropdown-toggle"  id="searchButton" type="input-button" data-toggle="dropdown">Available Classes
+           <button class= "btn btn-primary btn-block dropdown-toggle"  id="schoolSelectButton" type="input-button" data-toggle="dropdown">Schools
                <span class="caret"></span>
             </button>
          
-            <ul class="multi-level col-xs-12 dropdown-menu scrollable-menu" id="schoolSearch">
+            <ul class="col-xs-12 dropdown-menu scrollable-menu" id="schoolSelect">
 
             </ul>
          </span>
@@ -46,11 +46,32 @@
       </div>
          <div class="col-xs-6">
          <div class="form-group">
-            <input type="text" class="form-control" name="classSearch" id= "classSearch" onkeyup="matchSearch();" placeholder="Search for courses by number or name"></input>
+            <input type="text" class="form-control" name="schoolSearch" id= "schoolSearch" onkeyup="matchSchoolSearch();" placeholder="Pick a school"></input>
+         </div>
+         </div>
+      </div> <!-- end select a school -->
+   <div class="row"> <!-- select a class -->
+      <div class="col-xs-6">
+         <div class="input-group dropdown" id="courseBlock">
+         <span class="input-group-btn">
+           <button class= "btn btn-primary btn-block dropdown-toggle"  id="courseSelectButton" type="input-button" data-toggle="dropdown">Available Classes
+               <span class="caret"></span>
+            </button>
+         
+            <ul class="col-xs-12 dropdown-menu scrollable-menu" id="courseSelect">
+
+            </ul>
+         </span>
+
+         </div>
+      </div>
+         <div class="col-xs-6">
+         <div class="form-group">
+            <input type="text" class="form-control" name="courseSearch" id= "courseSearch" onkeyup="matchCourseSearch();" placeholder="Search for courses by number or name"></input>
          </div>
          </div>
       </div>
-   </div>
+      </div> <!-- end select a class -->
 </div>
 <div class="network" id="mynetwork"></div>
 <script type="text/javascript">
@@ -59,12 +80,16 @@
    nodes = nodes.split("\"identifier\":").join("\"id\":");
    //nodes = nodes.split("\"school\":").join("\"group\":");
    nodes = JSON.parse(nodes);
-
+   var schools = [];
    for(var i = 0; i < nodes.length; i++) {
       //nodes[i]["level"] = nodes[i].group;
       nodes[i]["label"] = nodes[i].id;
+      if(schools.indexOf(nodes[i].group) == -1) {
+         schools.push(nodes[i].group);
+      }
    }
-
+   console.log(schools);
+   var schoolSelected = false;
    //create nodes
    var nodeSet = new vis.DataSet(nodes);
 
@@ -90,8 +115,9 @@
    };
    var network;
    var allNodes;
+   var tempNodes;
    var highlightActive = false;
-   draw(); 
+   draw(nodeSet, edgeSet); 
 </script>
 
 
