@@ -40,7 +40,7 @@ function makeGraph(varargin)
         if  check ...
             || ~isfield(data{x}, 'sections') ...
             || any(num == 'X') ...
-            || str2num(num) > 5000 ...
+            || str2num(num(2:5)) > 5000 ...
             || (isfield(data{x}, 'restrictions') && isfield(data{x}.restrictions, 'Campuses') && isempty(strfind(data{x}.restrictions.Campuses.requirements, 'Atlanta'))) ...
             || sum(strcmpi(data{x}.identifier, nodes) ~= 0)
             ind = [ind, x];
@@ -113,25 +113,12 @@ function out = allprereq(ca)
             out = [out, ca{x}];
         end
     end
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-end
-=======
-=======
->>>>>>> gh-pages
 end
 % overwrite contains() for MATLAB versions below 2017
 function out = myContains(word, ca)
     out = [];
     for x = 1:length(ca)
        newword = strrep(word, ca{x}, char(0));
-<<<<<<< HEAD
        out = [out, ~isequal(newword, word)]; 
     end
 end
->>>>>>> Stashed changes
-=======
-       out = [out, isequal(newword, word)]; 
-    end
-end
->>>>>>> gh-pages
