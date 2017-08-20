@@ -561,11 +561,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ENGL 1102",
-			"to": "LMC 4904",
-			"arrows": "to"
-		},
-		{
 			"from": "COE 3001",
 			"to": "CEE 4405",
 			"arrows": "to"
@@ -3947,16 +3942,6 @@ var edges =
 		},
 		{
 			"from": "ENGL 1102",
-			"to": "LMC 3662",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3661",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
 			"to": "LMC 3502",
 			"arrows": "to"
 		},
@@ -6073,11 +6058,6 @@ var edges =
 		{
 			"from": "PHYS 2212",
 			"to": "EAS 3603",
-			"arrows": "to"
-		},
-		{
-			"from": "LS 0298",
-			"to": "ENGL 0199",
 			"arrows": "to"
 		},
 		{

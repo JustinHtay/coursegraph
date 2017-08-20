@@ -18,19 +18,18 @@ function makeGraph(varargin)
     end
     disp('Making nodes...')
     %position configuration
-    rad = 1900; % radius
-    cx = 2000; %center of circle
-    cy = 2000;
-    max_num = 5000; %maximum class number, can be changed
+    rad = 9500; % radius
+    cx = 10000; %center of circle
+    cy = 10000;
     %other variables
     ind = [];
-    level = [];
+    xs = [];
+    ys = [];
     nodes = {};
-    groups = {};
     %iterate through the data
     for x = 1:length(data)
         %separate school and number, i.e strtok('ECE 2026')
-        [~, num] = strtok(data{x}.identifier);
+        [test, num] = strtok(data{x}.identifier);
         %If it's any of the things in line 25, hasn't been offered (so it
         %doesn't have a section field), has an X in the number (i.e a
         %transfer course), is a graduate class (number > 5k), or isn't
@@ -43,11 +42,15 @@ function makeGraph(varargin)
         catch
             check = any(myContains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
         end
+        if isequal(test, 'LMC')
+           a = 1; 
+        end
         if  check ...
-            || ~strcmp(data{x}.grade_basis, 'ALP') ...    
+            || ~(any(data{x}.grade_basis == 'A') || any(data{x}.grade_basis == 'L')) ...    
             || ~isfield(data{x}, 'sections') ...
             || any(num == 'X') ...
             || str2num(num(2:5)) > 5000 ...
+            || str2num(num(2:5)) < 1000 ...
             || (isfield(data{x}, 'restrictions') && isfield(data{x}.restrictions, 'Campuses') && isempty(strfind(data{x}.restrictions.Campuses.requirements, 'Atlanta'))) ...
             || sum(strcmpi(data{x}.identifier, nodes) ~= 0)
             ind = [ind, x];
@@ -57,11 +60,17 @@ function makeGraph(varargin)
     end
     %Try to calculate the positions of all the nodes.
     groups = cellfun(@strtok, nodes, 'UniformOutput', false);
-    nums = cellfun(@(x) str2num(x(x >= '0' & x <= '9')), nodes, 'UniformOutput', false);
+    nums = cell2mat(cellfun(@(x) str2num(x(x >= '0' & x <= '9')), nodes, 'UniformOutput', false));
     uniqueGroups = unique(groups);
-    count = cellfun(@(x) strcmp(x, groups), uniqueGroups, 'UniformOutput', false);
-    count = cellfun(@sum, count); %number of classes for each school
-    angle = 2 * pi * count / sum(count);
+    loc = cellfun(@(x) strcmp(x, groups), uniqueGroups, 'UniformOutput', false);
+    count = [];
+    for z = 1:4
+        count = [count; cellfun(@(x) sum((floor(nums/1000) == z) & x), loc, 'UniformOutput', false)];
+    end
+    count = cell2mat(count);
+    %count = cellfun(@sum, count); %number of classes for each school
+    countdown = count;
+    angle = 2 * pi * sum(count) / sum(sum(count));
     
     %Write the node data to the nodeName file
     fhin = fopen(dataName);
@@ -77,12 +86,16 @@ function makeGraph(varargin)
             if length(line) > 20
                 %calculate position
                 pos = find(strcmp(groups{1}, uniqueGroups));
-                myAngle = sum(angle(1:pos-1)) + mod(nums{1}, 1000);
-                myX = cx + cos(myAngle) * rad * floor(nums{1}/1000) / 4;
-                myY = cy + sin(myAngle) * rad * floor(nums{1} / 1000) / 4;
+                level =floor(nums(1) / 1000);
+                myAngle = sum(angle(1:pos-1)) + angle(pos) * countdown(level,pos)/count(level,pos);
+                countdown(level,pos) = countdown(level,pos) - 1;
+                myX = cx + cos(myAngle) * rad * level / 4;
+                myY = cy + sin(myAngle) * rad * level / 4;
+                xs(end+1) = myX;
+                ys(end+1) = myY;
                 %print
                 line = [line(1:end-4), ', "x": ', '"', num2str(myX), '"', ', "y": ', '"', num2str(myY), '"',...
-                    ', "group": ', '"', groups{1}, '"',  ', "level": ', '"', num2str(floor(nums{1} / 1000)), '"',line(end-3:end)];
+                    ', "group": ', '"', groups{1}, '"',  ', "level": ', '"', level(1), '"',line(end-3:end)];
                 groups(1) = [];
                 nums(1) = [];
             end
@@ -121,6 +134,7 @@ function makeGraph(varargin)
     fh = fopen(edgeName, 'w');
     fprintf(fh, strjson);
     fclose(fh);
+    plot(xs,ys, '*')
 end
 
 %allprereq returns a cell array containing the prerequisites of the input

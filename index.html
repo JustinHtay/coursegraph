@@ -12,8 +12,8 @@
    
    <!-- Local Data Files -->
    <script type="text/javascript" src="./resources/js/util.js"></script>
-   <script type="text/javascript" src="./resources/js/combined_edges.js"></script>
-   <script type="text/javascript" src="./resources/js/combined_nodes.js"></script>
+   <script type="text/javascript" src="./resources/js/all_edges.js"></script>
+   <script type="text/javascript" src="./resources/js/all_nodes.js"></script>
    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
    
    <!-- Bootstrap Stuff -->
@@ -87,6 +87,7 @@
          schools.push(nodes[i].group);
       }
    }
+   schools.sort();
    var schoolSelected = false;
    //create nodes
    var nodeSet = new vis.DataSet(nodes);
@@ -94,6 +95,7 @@
    //create edges
    var edgeSet = new vis.DataSet(edges);
    var options = {
+      /*
       layout: {
          improvedLayout: true,
          hierarchical: {
@@ -103,6 +105,7 @@
             levelSeparation: 150
          }
       },
+      */
       edges: {
          smooth: {
             enabled: true,
