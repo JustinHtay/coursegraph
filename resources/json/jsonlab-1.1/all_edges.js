@@ -16,21 +16,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ENGL 1102",
-			"to": "LMC 3226",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3314",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3308",
-			"arrows": "to"
-		},
-		{
 			"from": "ECE 3043",
 			"to": "ECE 4043",
 			"arrows": "to"
@@ -267,11 +252,6 @@ var edges =
 		},
 		{
 			"from": "ECE 2031",
-			"to": "ECE 3006",
-			"arrows": "to"
-		},
-		{
-			"from": "ECE 2031",
 			"to": "ECE 3005",
 			"arrows": "to"
 		},
@@ -367,11 +347,6 @@ var edges =
 		},
 		{
 			"from": "ECE 2026",
-			"to": "ECE 3025",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 2110",
 			"to": "ECE 3025",
 			"arrows": "to"
 		},
@@ -546,58 +521,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CEE 3020",
-			"to": "CEE 4540",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 1770",
-			"to": "CEE 4600",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 1770",
-			"to": "CEE 4600",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 4904",
-			"arrows": "to"
-		},
-		{
 			"from": "COE 3001",
 			"to": "CEE 4405",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "CEE 4405",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1310",
-			"to": "CEE 4300",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1211K",
-			"to": "CEE 4300",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2211",
-			"to": "CEE 4300",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2231",
-			"to": "CEE 4300",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 1552",
-			"to": "CEE 4300",
 			"arrows": "to"
 		},
 		{
@@ -611,36 +536,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ENGL 1102",
-			"to": "LMC 4702",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 4701",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 2040",
-			"to": "CEE 3040",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 2202",
-			"to": "CEE 3040",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2551",
-			"to": "CEE 3040",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2561",
-			"to": "CEE 3040",
-			"arrows": "to"
-		},
-		{
 			"from": "CHEM 1310",
 			"to": "CEE 2300",
 			"arrows": "to"
@@ -663,21 +558,6 @@ var edges =
 		{
 			"from": "MATH 1552",
 			"to": "CEE 2300",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3431",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3432",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3403",
 			"arrows": "to"
 		},
 		{
@@ -693,71 +573,6 @@ var edges =
 		{
 			"from": "MATH 1550",
 			"to": "EAS 1600",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3318",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3256",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 3256",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2500",
-			"to": "LMC 3256",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2400",
-			"to": "LMC 3256",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3258",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 3258",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2500",
-			"to": "LMC 3258",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2400",
-			"to": "LMC 3258",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3214",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3202",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3112",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2720",
 			"arrows": "to"
 		},
 		{
@@ -796,11 +611,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ENGL 1102",
-			"to": "LMC 3102",
-			"arrows": "to"
-		},
-		{
 			"from": "AE 3521",
 			"to": "AE 4351",
 			"arrows": "to"
@@ -808,21 +618,6 @@ var edges =
 		{
 			"from": "AE 4451",
 			"to": "AE 4351",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2661",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2662",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2500",
 			"arrows": "to"
 		},
 		{
@@ -1076,11 +871,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "COA 1011",
-			"to": "COA 1012",
-			"arrows": "to"
-		},
-		{
 			"from": "MATH 2552",
 			"to": "COE 3001",
 			"arrows": "to"
@@ -1127,37 +917,7 @@ var edges =
 		},
 		{
 			"from": "SPAN 2002",
-			"to": "SPAN 4693",
-			"arrows": "to"
-		},
-		{
-			"from": "SPAN 1002",
-			"to": "SPAN 3692",
-			"arrows": "to"
-		},
-		{
-			"from": "SPAN 1002",
-			"to": "SPAN 3691",
-			"arrows": "to"
-		},
-		{
-			"from": "SPAN 2002",
-			"to": "SPAN 3591",
-			"arrows": "to"
-		},
-		{
-			"from": "SPAN 2002",
-			"to": "SPAN 3590",
-			"arrows": "to"
-		},
-		{
-			"from": "SPAN 2002",
 			"to": "SPAN 3102",
-			"arrows": "to"
-		},
-		{
-			"from": "SPAN 2002",
-			"to": "SPAN 3101",
 			"arrows": "to"
 		},
 		{
@@ -1176,83 +936,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "SPAN 2002",
-			"to": "SPAN 3111",
-			"arrows": "to"
-		},
-		{
-			"from": "CHIN 2002",
-			"to": "CHIN 3021",
-			"arrows": "to"
-		},
-		{
-			"from": "CHIN 2002",
-			"to": "CHIN 3003",
-			"arrows": "to"
-		},
-		{
-			"from": "CHIN 2001",
-			"to": "CHIN 2002",
-			"arrows": "to"
-		},
-		{
-			"from": "CHIN 1002",
-			"to": "CHIN 2001",
-			"arrows": "to"
-		},
-		{
-			"from": "CHIN 1001",
-			"to": "CHIN 1002",
-			"arrows": "to"
-		},
-		{
-			"from": "APPH 1040",
-			"to": "APPH 3500",
-			"arrows": "to"
-		},
-		{
-			"from": "APPH 1050",
-			"to": "APPH 3500",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 2002",
-			"to": "RUSS 3001",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 1002",
-			"to": "RUSS 2001",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 1001",
-			"to": "RUSS 1002",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 2001",
-			"to": "RUSS 2002",
-			"arrows": "to"
-		},
-		{
-			"from": "SPAN 2002",
-			"to": "SPAN 4150",
-			"arrows": "to"
-		},
-		{
 			"from": "PSYC 4600",
 			"to": "PSYC 4601",
-			"arrows": "to"
-		},
-		{
-			"from": "POL 1101",
-			"to": "PUBP 4651",
-			"arrows": "to"
-		},
-		{
-			"from": "INTA 1200",
-			"to": "PUBP 4651",
 			"arrows": "to"
 		},
 		{
@@ -1321,16 +1006,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "PSYC 1101",
-			"to": "PSYC 2103",
-			"arrows": "to"
-		},
-		{
-			"from": "PSYC 1101",
-			"to": "PSYC 2210",
-			"arrows": "to"
-		},
-		{
 			"from": "SPAN 2002",
 			"to": "SPAN 4251",
 			"arrows": "to"
@@ -1346,11 +1021,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "PSYC 2020",
-			"to": "PSYC 4011",
-			"arrows": "to"
-		},
-		{
 			"from": "PSYC 1101",
 			"to": "PSYC 4020",
 			"arrows": "to"
@@ -1362,16 +1032,6 @@ var edges =
 		},
 		{
 			"from": "PSYC 1101",
-			"to": "PSYC 3040",
-			"arrows": "to"
-		},
-		{
-			"from": "PSYC 1101",
-			"to": "PSYC 4025",
-			"arrows": "to"
-		},
-		{
-			"from": "PSYC 2020",
 			"to": "PSYC 4025",
 			"arrows": "to"
 		},
@@ -1396,53 +1056,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "MATH 1551",
-			"to": "PSYC 2020",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 1552",
-			"to": "PSYC 2020",
-			"arrows": "to"
-		},
-		{
 			"from": "SPAN 2002",
 			"to": "SPAN 3050",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 3002",
-			"to": "RUSS 4692",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 3002",
-			"to": "RUSS 4693",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 2002",
-			"to": "RUSS 3692",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 2002",
-			"to": "RUSS 3695",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 2002",
-			"to": "RUSS 3691",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 1001",
-			"to": "RUSS 2691",
-			"arrows": "to"
-		},
-		{
-			"from": "RUSS 1001",
-			"to": "RUSS 2692",
 			"arrows": "to"
 		},
 		{
@@ -1463,11 +1078,6 @@ var edges =
 		{
 			"from": "PHYS 3143",
 			"to": "PHYS 4321",
-			"arrows": "to"
-		},
-		{
-			"from": "POL 1101",
-			"to": "PUBP 4952",
 			"arrows": "to"
 		},
 		{
@@ -1498,16 +1108,6 @@ var edges =
 		{
 			"from": "ECON 2106",
 			"to": "PUBP 3020",
-			"arrows": "to"
-		},
-		{
-			"from": "POL 1101",
-			"to": "PUBP 2651",
-			"arrows": "to"
-		},
-		{
-			"from": "INTA 1200",
-			"to": "PUBP 2651",
 			"arrows": "to"
 		},
 		{
@@ -1801,48 +1401,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3340",
-			"to": "NRE 4214",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3345",
-			"to": "NRE 4214",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3301",
-			"to": "NRE 4328",
-			"arrows": "to"
-		},
-		{
 			"from": "NRE 3112",
 			"to": "NRE 4328",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 2110",
-			"to": "NRE 3112",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3301",
-			"to": "NRE 3112",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3208",
-			"to": "NRE 4208",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "NRE 4208",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "NRE 4208",
 			"arrows": "to"
 		},
 		{
@@ -1876,118 +1436,13 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "MUSI 3730",
-			"to": "MUSI 3740",
-			"arrows": "to"
-		},
-		{
 			"from": "MATH 1552",
 			"to": "MUSI 2525",
 			"arrows": "to"
 		},
 		{
-			"from": "MUSI 2011",
-			"to": "MUSI 2012",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3316",
-			"to": "NRE 4404",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 4214",
-			"to": "NRE 4266",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 4208",
-			"to": "NRE 4232",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 4328",
-			"to": "NRE 4232",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3112",
-			"to": "NRE 4206",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 4208",
-			"to": "NRE 4206",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "NRE 3316",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "NRE 3316",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3301",
-			"to": "NRE 3316",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3301",
-			"to": "NRE 3208",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "NRE 3208",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "NRE 3208",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 1552",
-			"to": "NRE 3301",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2211",
-			"to": "NRE 3301",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2231",
-			"to": "NRE 3301",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 3323",
-			"arrows": "to"
-		},
-		{
 			"from": "PERS 1001",
 			"to": "PERS 1002",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 2321",
-			"to": "NS 4322",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 3325",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 4320",
 			"arrows": "to"
 		},
 		{
@@ -1998,16 +1453,6 @@ var edges =
 		{
 			"from": "NS 3326",
 			"to": "NS 4320",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 2323",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 2321",
 			"arrows": "to"
 		},
 		{
@@ -2028,21 +1473,6 @@ var edges =
 		{
 			"from": "NRE 3112",
 			"to": "MP 4750",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 1323",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 3326",
-			"arrows": "to"
-		},
-		{
-			"from": "NS 1321",
-			"to": "NS 4323",
 			"arrows": "to"
 		},
 		{
@@ -2081,16 +1511,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3180",
-			"to": "ME 4041",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3345",
-			"to": "ME 4041",
-			"arrows": "to"
-		},
-		{
 			"from": "ME 3017",
 			"to": "ME 4056",
 			"arrows": "to"
@@ -2101,11 +1521,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3345",
-			"to": "ME 4056",
-			"arrows": "to"
-		},
-		{
 			"from": "MATH 3670",
 			"to": "ME 4056",
 			"arrows": "to"
@@ -2118,81 +1533,6 @@ var edges =
 		{
 			"from": "ISYE 3770",
 			"to": "ME 4056",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 2110",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3210",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3180",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 4315",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 3670",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3770",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3770",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "COE 3001",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3345",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3017",
-			"to": "ME 4182",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "ME 3345",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "ME 3345",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3340",
-			"to": "ME 3345",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "ME 3345",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "ME 3345",
 			"arrows": "to"
 		},
 		{
@@ -2203,46 +1543,6 @@ var edges =
 		{
 			"from": "MSE 2001",
 			"to": "ME 3210",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 1770",
-			"to": "ME 3180",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 1770",
-			"to": "ME 3180",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 2110",
-			"to": "ME 3180",
-			"arrows": "to"
-		},
-		{
-			"from": "COE 3001",
-			"to": "ME 3180",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2211",
-			"to": "ME 3322",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2231",
-			"to": "ME 3322",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "ME 3322",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "ME 3322",
 			"arrows": "to"
 		},
 		{
@@ -2281,27 +1581,12 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3340",
-			"to": "ME 3057",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "ME 3057",
-			"arrows": "to"
-		},
-		{
 			"from": "COE 3001",
 			"to": "ME 3057",
 			"arrows": "to"
 		},
 		{
 			"from": "ME 3017",
-			"to": "ME 3057",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3345",
 			"to": "ME 3057",
 			"arrows": "to"
 		},
@@ -2323,81 +1608,6 @@ var edges =
 		{
 			"from": "COE 2001",
 			"to": "ME 2202",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 2202",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "AE 2220",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 2110",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "NRE 3301",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "MSE 3005",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 3411",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "MSE 3001",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2551",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2561",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "COE 2001",
-			"to": "ME 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 1770",
-			"to": "ME 2110",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 1770",
-			"to": "ME 2110",
 			"arrows": "to"
 		},
 		{
@@ -2896,23 +2106,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "MUSI 3740",
-			"to": "MUSI 3750",
-			"arrows": "to"
-		},
-		{
 			"from": "MUSI 2525",
 			"to": "MUSI 2526",
-			"arrows": "to"
-		},
-		{
-			"from": "MUSI 2010",
-			"to": "MUSI 2015",
-			"arrows": "to"
-		},
-		{
-			"from": "MUSI 2010",
-			"to": "MUSI 2011",
 			"arrows": "to"
 		},
 		{
@@ -2926,11 +2121,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "COE 3001",
-			"to": "MSE 4790",
-			"arrows": "to"
-		},
-		{
 			"from": "MSE 2001",
 			"to": "MSE 4751",
 			"arrows": "to"
@@ -2941,37 +2131,12 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3322",
-			"to": "MSE 4766",
-			"arrows": "to"
-		},
-		{
-			"from": "AE 3450",
-			"to": "MSE 4766",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 3141",
-			"to": "MSE 4766",
-			"arrows": "to"
-		},
-		{
-			"from": "MSE 3001",
-			"to": "MSE 4766",
-			"arrows": "to"
-		},
-		{
 			"from": "BIOL 1520",
 			"to": "MSE 4740",
 			"arrows": "to"
 		},
 		{
 			"from": "BIOL 3600",
-			"to": "MSE 4740",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3100",
 			"to": "MSE 4740",
 			"arrows": "to"
 		},
@@ -2997,11 +2162,6 @@ var edges =
 		},
 		{
 			"from": "CHEM 3411",
-			"to": "MSE 4775",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
 			"to": "MSE 4775",
 			"arrows": "to"
 		},
@@ -3058,16 +2218,6 @@ var edges =
 		{
 			"from": "MSE 3002",
 			"to": "MSE 4002",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3200",
-			"to": "MSE 3225",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3340",
-			"to": "MSE 3225",
 			"arrows": "to"
 		},
 		{
@@ -3161,16 +2311,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "COE 3001",
-			"to": "ME 4791",
-			"arrows": "to"
-		},
-		{
-			"from": "COE 3001",
-			"to": "ME 4790",
-			"arrows": "to"
-		},
-		{
 			"from": "CHEM 2312",
 			"to": "ME 4775",
 			"arrows": "to"
@@ -3196,58 +2336,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3322",
-			"to": "ME 4766",
-			"arrows": "to"
-		},
-		{
-			"from": "AE 3450",
-			"to": "ME 4766",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 3141",
-			"to": "ME 4766",
-			"arrows": "to"
-		},
-		{
-			"from": "MSE 3001",
-			"to": "ME 4766",
-			"arrows": "to"
-		},
-		{
 			"from": "MSE 2001",
 			"to": "ME 4759",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "ME 4760",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "ME 4760",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3340",
-			"to": "ME 4757",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "ME 4757",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3130",
-			"to": "ME 4720",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "ME 4720",
 			"arrows": "to"
 		},
 		{
@@ -3257,11 +2347,6 @@ var edges =
 		},
 		{
 			"from": "BIOL 3600",
-			"to": "ME 4740",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3100",
 			"to": "ME 4740",
 			"arrows": "to"
 		},
@@ -3291,48 +2376,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3322",
-			"to": "ME 4321",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3345",
-			"to": "ME 4321",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 1770",
-			"to": "ME 4315",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 1770",
-			"to": "ME 4315",
-			"arrows": "to"
-		},
-		{
 			"from": "ME 2110",
 			"to": "ME 4315",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3345",
-			"to": "ME 4315",
-			"arrows": "to"
-		},
-		{
-			"from": "COE 3001",
-			"to": "ME 4193",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3340",
-			"to": "ME 4193",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "ME 4193",
 			"arrows": "to"
 		},
 		{
@@ -3343,31 +2388,6 @@ var edges =
 		{
 			"from": "ECE 2040",
 			"to": "ME 4013",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 2202",
-			"to": "ME 4189",
-			"arrows": "to"
-		},
-		{
-			"from": "AE 2220",
-			"to": "ME 4189",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "ME 4189",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "ME 4189",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3345",
-			"to": "ME 4011",
 			"arrows": "to"
 		},
 		{
@@ -3401,41 +2421,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHEM 1310",
-			"to": "ME 4793",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1211K",
-			"to": "ME 4793",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1212K",
-			"to": "ME 4793",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2212",
-			"to": "ME 4793",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2232",
-			"to": "ME 4793",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3130",
-			"to": "ME 4767",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "ME 4767",
-			"arrows": "to"
-		},
-		{
 			"from": "COE 3001",
 			"to": "ME 4758",
 			"arrows": "to"
@@ -3458,21 +2443,6 @@ var edges =
 		{
 			"from": "ECE 3710",
 			"to": "ME 4754",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 4741",
-			"to": "ME 4742",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3130",
-			"to": "ME 4730",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "ME 4730",
 			"arrows": "to"
 		},
 		{
@@ -3511,11 +2481,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ME 3345",
-			"to": "ME 4215",
-			"arrows": "to"
-		},
-		{
 			"from": "MGT 3300",
 			"to": "MGT 4311",
 			"arrows": "to"
@@ -3526,37 +2491,7 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "MGT 3062",
-			"to": "MGT 4195",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 3300",
-			"to": "MGT 4195",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 3501",
-			"to": "MGT 4195",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 3101",
-			"to": "MGT 4195",
-			"arrows": "to"
-		},
-		{
 			"from": "MGT 3150",
-			"to": "MGT 4195",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 3150",
-			"to": "MGT 4106",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 3101",
 			"to": "MGT 4106",
 			"arrows": "to"
 		},
@@ -3621,18 +2556,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "MGT 3101",
-			"to": "MGT 4670",
-			"arrows": "to"
-		},
-		{
 			"from": "MGT 3150",
 			"to": "MGT 4670",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 3501",
-			"to": "MGT 4401",
 			"arrows": "to"
 		},
 		{
@@ -3761,11 +2686,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "MGT 3101",
-			"to": "MGT 3103",
-			"arrows": "to"
-		},
-		{
 			"from": "MGT 3102",
 			"to": "MGT 3103",
 			"arrows": "to"
@@ -3891,271 +2811,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "LMC 2700",
-			"to": "LMC 4725",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 4725",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1331",
-			"to": "LMC 4720",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2700",
-			"to": "LMC 4720",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 4720",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1331",
-			"to": "LMC 4730",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2700",
-			"to": "LMC 4730",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 4730",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 4602",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 4204",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3843",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3662",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3661",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3502",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3414",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3410",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1301",
-			"to": "LMC 3705",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1315",
-			"to": "LMC 3705",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1371",
-			"to": "LMC 3705",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2700",
-			"to": "LMC 3705",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3406",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1301",
-			"to": "LMC 3710",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1315",
-			"to": "LMC 3710",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1371",
-			"to": "LMC 3710",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2700",
-			"to": "LMC 3710",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3402",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3304",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3302",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3255",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3257",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 3257",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2500",
-			"to": "LMC 3257",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2400",
-			"to": "LMC 3257",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3253",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3254",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 3254",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2500",
-			"to": "LMC 3254",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2400",
-			"to": "LMC 3254",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3228",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3234",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3204",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3206",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3108",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2700",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1315",
-			"to": "LMC 2700",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1301",
-			"to": "LMC 2700",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1371",
-			"to": "LMC 2700",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2200",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2100",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2700",
-			"to": "LMC 2730",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2720",
-			"to": "LMC 2730",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2400",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2000",
-			"arrows": "to"
-		},
-		{
 			"from": "CHEM 1310",
 			"to": "MSE 4793",
 			"arrows": "to"
@@ -4241,11 +2896,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "MGT 4741",
-			"to": "MGT 4742",
-			"arrows": "to"
-		},
-		{
 			"from": "MGT 2251",
 			"to": "MGT 4367",
 			"arrows": "to"
@@ -4257,11 +2907,6 @@ var edges =
 		},
 		{
 			"from": "MGT 3150",
-			"to": "MGT 4102",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 3101",
 			"to": "MGT 4102",
 			"arrows": "to"
 		},
@@ -4297,11 +2942,6 @@ var edges =
 		},
 		{
 			"from": "MGT 2106",
-			"to": "MGT 3616",
-			"arrows": "to"
-		},
-		{
-			"from": "MGT 2106",
 			"to": "MGT 3607",
 			"arrows": "to"
 		},
@@ -4323,96 +2963,6 @@ var edges =
 		{
 			"from": "MGT 3078",
 			"to": "MGT 3075",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3514",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3412",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3408",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3316",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3306",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3262",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3252",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2000",
-			"to": "LMC 3252",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2500",
-			"to": "LMC 3252",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 2400",
-			"to": "LMC 3252",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3225",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3215",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3208",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3212",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3114",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 3104",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2300",
-			"arrows": "to"
-		},
-		{
-			"from": "ENGL 1102",
-			"to": "LMC 2600",
 			"arrows": "to"
 		},
 		{
@@ -4521,11 +3071,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BMED 3100",
-			"to": "ISYE 4740",
-			"arrows": "to"
-		},
-		{
 			"from": "PHYS 2211",
 			"to": "ISYE 4740",
 			"arrows": "to"
@@ -4536,26 +3081,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ISYE 3103",
-			"to": "ISYE 4111",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3133",
-			"to": "ISYE 4111",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3232",
-			"to": "ISYE 4111",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3025",
-			"to": "ISYE 4311",
-			"arrows": "to"
-		},
-		{
 			"from": "ISYE 3232",
 			"to": "ISYE 4311",
 			"arrows": "to"
@@ -4563,16 +3088,6 @@ var edges =
 		{
 			"from": "ISYE 3133",
 			"to": "ISYE 4311",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3232",
-			"to": "ISYE 4301",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3133",
-			"to": "ISYE 4301",
 			"arrows": "to"
 		},
 		{
@@ -4593,11 +3108,6 @@ var edges =
 		{
 			"from": "MATH 3225",
 			"to": "ISYE 3232",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3025",
-			"to": "ISYE 4106",
 			"arrows": "to"
 		},
 		{
@@ -4731,11 +3241,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ID 4011",
-			"to": "ID 4012",
-			"arrows": "to"
-		},
-		{
 			"from": "ID 3032",
 			"to": "ID 4062",
 			"arrows": "to"
@@ -4763,11 +3268,6 @@ var edges =
 		{
 			"from": "ID 3052",
 			"to": "ID 4072",
-			"arrows": "to"
-		},
-		{
-			"from": "COA 1012",
-			"to": "ID 3510",
 			"arrows": "to"
 		},
 		{
@@ -4798,16 +3298,6 @@ var edges =
 		{
 			"from": "ID 2022",
 			"to": "ID 3052",
-			"arrows": "to"
-		},
-		{
-			"from": "COA 1012",
-			"to": "ID 2320",
-			"arrows": "to"
-		},
-		{
-			"from": "COA 1012",
-			"to": "ID 2022",
 			"arrows": "to"
 		},
 		{
@@ -4871,11 +3361,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ID 3302",
-			"to": "ID 4011",
-			"arrows": "to"
-		},
-		{
 			"from": "ID 3032",
 			"to": "ID 4071",
 			"arrows": "to"
@@ -4888,11 +3373,6 @@ var edges =
 		{
 			"from": "ID 3052",
 			"to": "ID 4071",
-			"arrows": "to"
-		},
-		{
-			"from": "ID 3301",
-			"to": "ID 3302",
 			"arrows": "to"
 		},
 		{
@@ -4913,11 +3393,6 @@ var edges =
 		{
 			"from": "ID 1012",
 			"to": "ID 2023",
-			"arrows": "to"
-		},
-		{
-			"from": "COA 1012",
-			"to": "ID 2021",
 			"arrows": "to"
 		},
 		{
@@ -4986,28 +3461,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ENGL 1101",
-			"to": "ENGL 1102",
-			"arrows": "to"
-		},
-		{
 			"from": "FREN 1002",
 			"to": "FREN 2005",
-			"arrows": "to"
-		},
-		{
-			"from": "FREN 1002",
-			"to": "FREN 3691",
-			"arrows": "to"
-		},
-		{
-			"from": "FREN 1002",
-			"to": "FREN 3692",
-			"arrows": "to"
-		},
-		{
-			"from": "FREN 1002",
-			"to": "FREN 3693",
 			"arrows": "to"
 		},
 		{
@@ -5521,26 +3976,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ECON 2100",
-			"to": "ECON 4990",
-			"arrows": "to"
-		},
-		{
-			"from": "ECON 2105",
-			"to": "ECON 4990",
-			"arrows": "to"
-		},
-		{
-			"from": "ECON 2106",
-			"to": "ECON 4990",
-			"arrows": "to"
-		},
-		{
-			"from": "ECON 2101",
-			"to": "ECON 4990",
-			"arrows": "to"
-		},
-		{
 			"from": "INTA 4740",
 			"to": "ECON 4741",
 			"arrows": "to"
@@ -5686,21 +4121,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "ECON 2100",
-			"to": "ECON 3300",
-			"arrows": "to"
-		},
-		{
-			"from": "ECON 2101",
-			"to": "ECON 3300",
-			"arrows": "to"
-		},
-		{
-			"from": "ECON 2106",
-			"to": "ECON 3300",
-			"arrows": "to"
-		},
-		{
 			"from": "ISYE 3770",
 			"to": "ECON 3161",
 			"arrows": "to"
@@ -5777,31 +4197,6 @@ var edges =
 		},
 		{
 			"from": "EAS 3610",
-			"to": "EAS 4610",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 4655",
-			"to": "EAS 4610",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 4740",
-			"to": "EAS 4610",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 4655",
-			"to": "EAS 4610",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 4740",
-			"to": "EAS 4610",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 3610",
 			"to": "EAS 4480",
 			"arrows": "to"
 		},
@@ -5823,16 +4218,6 @@ var edges =
 		{
 			"from": "EAS 4655",
 			"to": "EAS 4450",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 2600",
-			"to": "EAS 4420",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 4740",
-			"to": "EAS 4420",
 			"arrows": "to"
 		},
 		{
@@ -6076,11 +4461,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "LS 0298",
-			"to": "ENGL 0199",
-			"arrows": "to"
-		},
-		{
 			"from": "CS 1332",
 			"to": "CS 3630",
 			"arrows": "to"
@@ -6316,11 +4696,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CS 2340",
-			"to": "CS 3311",
-			"arrows": "to"
-		},
-		{
 			"from": "CS 2050",
 			"to": "CS 3510",
 			"arrows": "to"
@@ -6341,16 +4716,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CS 2340",
-			"to": "CS 3312",
-			"arrows": "to"
-		},
-		{
-			"from": "LMC 3432",
-			"to": "CS 3312",
-			"arrows": "to"
-		},
-		{
 			"from": "CS 2200",
 			"to": "CS 3251",
 			"arrows": "to"
@@ -6363,11 +4728,6 @@ var edges =
 		{
 			"from": "ECE 2031",
 			"to": "CS 3220",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 2340",
-			"to": "CS 3300",
 			"arrows": "to"
 		},
 		{
@@ -6476,11 +4836,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CS 4741",
-			"to": "CS 4742",
-			"arrows": "to"
-		},
-		{
 			"from": "CS 3600",
 			"to": "CS 4731",
 			"arrows": "to"
@@ -6561,73 +4916,13 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CEE 3055",
-			"to": "CEE 4550",
-			"arrows": "to"
-		},
-		{
 			"from": "COE 3001",
 			"to": "CEE 4791",
 			"arrows": "to"
 		},
 		{
-			"from": "CEE 3000",
-			"to": "CEE 4610",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3055",
-			"to": "CEE 4520",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3055",
-			"to": "CEE 4510",
-			"arrows": "to"
-		},
-		{
 			"from": "COE 3001",
 			"to": "CEE 4450",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 2300",
-			"to": "CEE 4340",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "CEE 4340",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1310",
-			"to": "CEE 4330",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1211K",
-			"to": "CEE 4330",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2211",
-			"to": "CEE 4330",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2231",
-			"to": "CEE 4330",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "CEE 4200",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "CEE 4210",
 			"arrows": "to"
 		},
 		{
@@ -6653,16 +4948,6 @@ var edges =
 		{
 			"from": "BIOL 1511",
 			"to": "CEE 3340",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 1551",
-			"to": "CEE 3000",
-			"arrows": "to"
-		},
-		{
-			"from": "COE 3001",
-			"to": "CEE 3020",
 			"arrows": "to"
 		},
 		{
@@ -6906,31 +5191,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHBE 4510",
-			"to": "CHBE 4530",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4515",
-			"to": "CHBE 4530",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "CEE 4795",
-			"arrows": "to"
-		},
-		{
-			"from": "COE 3001",
-			"to": "CEE 4530",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 4405",
-			"to": "CEE 4430",
-			"arrows": "to"
-		},
-		{
 			"from": "CEE 4405",
 			"to": "CEE 4406",
 			"arrows": "to"
@@ -6941,228 +5201,13 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CEE 3040",
-			"to": "CEE 4395",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3340",
-			"to": "CEE 4395",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 4300",
-			"to": "CEE 4395",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 4310",
-			"to": "CEE 4395",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 2300",
-			"to": "CEE 4310",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "CEE 4310",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3340",
-			"to": "CEE 4310",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3040",
-			"to": "CEE 4225",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 4100",
-			"to": "CEE 4130",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4510",
-			"to": "CHBE 4520",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4515",
-			"to": "CHBE 4520",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4515",
-			"arrows": "to"
-		},
-		{
 			"from": "CHBE 3225",
 			"to": "CHBE 4515",
 			"arrows": "to"
 		},
 		{
-			"from": "CHBE 4300",
-			"to": "CHBE 4515",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4412",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3225",
-			"to": "CHBE 4412",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4300",
-			"to": "CHBE 4412",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4411",
-			"to": "CHBE 4412",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3200",
-			"to": "CHBE 4300",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4300",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3130",
-			"to": "CHBE 4300",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3200",
-			"to": "CHBE 3225",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 3225",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3130",
-			"to": "CHBE 3225",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3130",
-			"to": "CHBE 3210",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3200",
-			"to": "CHBE 3210",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4200",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3225",
-			"to": "CHBE 4200",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4300",
-			"to": "CHBE 4200",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4210",
-			"arrows": "to"
-		},
-		{
 			"from": "CHBE 3225",
 			"to": "CHBE 4210",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4300",
-			"to": "CHBE 4210",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 2120",
-			"to": "CHBE 3130",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 2130",
-			"to": "CHBE 3130",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2551",
-			"to": "CHBE 3130",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2561",
-			"to": "CHBE 3130",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "CHBE 3130",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "CHBE 3130",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 2130",
-			"to": "CHBE 3200",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 2120",
-			"to": "CHBE 3200",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2551",
-			"to": "CHBE 3200",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2561",
-			"to": "CHBE 3200",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "CHBE 3200",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "CHBE 3200",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2211",
-			"to": "CHBE 3200",
 			"arrows": "to"
 		},
 		{
@@ -7366,11 +5411,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHEM 2211",
-			"to": "CHEM 3211",
-			"arrows": "to"
-		},
-		{
 			"from": "CHEM 2311",
 			"to": "CHEM 2313",
 			"arrows": "to"
@@ -7387,16 +5427,6 @@ var edges =
 		},
 		{
 			"from": "CHEM 1212K",
-			"to": "CHEM 2211",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1212K",
-			"to": "CHEM 2380",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 2211",
 			"to": "CHEM 2380",
 			"arrows": "to"
 		},
@@ -7441,43 +5471,13 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHBE 3130",
-			"to": "CHBE 4720",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "CHBE 4720",
-			"arrows": "to"
-		},
-		{
 			"from": "CHEM 2312",
-			"to": "CHBE 4535",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
 			"to": "CHBE 4535",
 			"arrows": "to"
 		},
 		{
 			"from": "MSE 2001",
 			"to": "CHBE 4535",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4510",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3225",
-			"to": "CHBE 4510",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4300",
-			"to": "CHBE 4510",
 			"arrows": "to"
 		},
 		{
@@ -7491,53 +5491,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4310",
-			"arrows": "to"
-		},
-		{
 			"from": "CHBE 3225",
 			"to": "CHBE 4310",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4300",
-			"to": "CHBE 4310",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3210",
-			"to": "CHBE 4411",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3225",
-			"to": "CHBE 4411",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 4300",
-			"to": "CHBE 4411",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 2100",
-			"to": "CHBE 2130",
-			"arrows": "to"
-		},
-		{
-			"from": "BIOL 1510",
-			"to": "CHBE 2130",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 2100",
-			"to": "CHBE 2120",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1371",
-			"to": "CHBE 2120",
 			"arrows": "to"
 		},
 		{
@@ -7626,53 +5581,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHIN 2002",
-			"to": "CHIN 3693",
-			"arrows": "to"
-		},
-		{
-			"from": "CHIN 2002",
-			"to": "CHIN 3692",
-			"arrows": "to"
-		},
-		{
-			"from": "CHIN 2002",
-			"to": "CHIN 3691",
-			"arrows": "to"
-		},
-		{
 			"from": "ARCH 2211",
 			"to": "ARCH 3231",
-			"arrows": "to"
-		},
-		{
-			"from": "COA 1012",
-			"to": "ARCH 2474",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3100",
-			"to": "BMED 3520",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2210",
-			"to": "BMED 3520",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "BMED 3520",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "BMED 3520",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1371",
-			"to": "BMED 3520",
 			"arrows": "to"
 		},
 		{
@@ -7691,37 +5601,7 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BMED 3100",
-			"to": "BMED 3600",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2310",
-			"to": "BMED 3610",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3310",
-			"to": "BMED 3610",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3110",
-			"to": "BMED 3610",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3600",
-			"to": "BMED 3610",
-			"arrows": "to"
-		},
-		{
 			"from": "BIOL 1520",
-			"to": "BIOL 4740",
-			"arrows": "to"
-		},
-		{
-			"from": "BIOL 1521",
 			"to": "BIOL 4740",
 			"arrows": "to"
 		},
@@ -7731,23 +5611,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BMED 3100",
-			"to": "BIOL 4740",
-			"arrows": "to"
-		},
-		{
 			"from": "PHYS 2211",
 			"to": "BIOL 4740",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 1315",
-			"to": "BMED 3100",
-			"arrows": "to"
-		},
-		{
-			"from": "CHEM 2311",
-			"to": "BMED 3100",
 			"arrows": "to"
 		},
 		{
@@ -7766,56 +5631,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BMED 3100",
-			"to": "BMED 3110",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3400",
-			"to": "BMED 3110",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2400",
-			"to": "BMED 3110",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3770",
-			"to": "BMED 3110",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3770",
-			"to": "BMED 3110",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1371",
-			"to": "BMED 3110",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2210",
-			"to": "BMED 2310",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2250",
-			"to": "BMED 2310",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2211",
-			"to": "BMED 2310",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2210",
-			"to": "BMED 2250",
-			"arrows": "to"
-		},
-		{
 			"from": "MATH 1552",
 			"to": "BMED 2210",
 			"arrows": "to"
@@ -7828,41 +5643,6 @@ var edges =
 		{
 			"from": "CHEM 1310",
 			"to": "BMED 2210",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2210",
-			"to": "BMED 3310",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2551",
-			"to": "BMED 3310",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2561",
-			"to": "BMED 3310",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2552",
-			"to": "BMED 3310",
-			"arrows": "to"
-		},
-		{
-			"from": "MATH 2562",
-			"to": "BMED 3310",
-			"arrows": "to"
-		},
-		{
-			"from": "CS 1371",
-			"to": "BMED 3310",
-			"arrows": "to"
-		},
-		{
-			"from": "PHYS 2211",
-			"to": "BMED 3310",
 			"arrows": "to"
 		},
 		{
@@ -7971,11 +5751,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BIOL 1521",
-			"to": "BIOL 4015",
-			"arrows": "to"
-		},
-		{
 			"from": "CHEM 1310",
 			"to": "BIOL 4015",
 			"arrows": "to"
@@ -8002,11 +5777,6 @@ var edges =
 		},
 		{
 			"from": "EAS 1600",
-			"to": "BIOL 4015",
-			"arrows": "to"
-		},
-		{
-			"from": "EAS 1601",
 			"to": "BIOL 4015",
 			"arrows": "to"
 		},
@@ -8091,16 +5861,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHBE 3130",
-			"to": "CHBE 4767",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "CHBE 4767",
-			"arrows": "to"
-		},
-		{
 			"from": "CHEM 3511",
 			"to": "CHBE 4765",
 			"arrows": "to"
@@ -8111,43 +5871,8 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "CHBE 3130",
-			"to": "CHBE 4730",
-			"arrows": "to"
-		},
-		{
-			"from": "ME 3322",
-			"to": "CHBE 4730",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3200",
-			"to": "CHBE 4050",
-			"arrows": "to"
-		},
-		{
-			"from": "CHBE 3130",
-			"to": "CHBE 4050",
-			"arrows": "to"
-		},
-		{
 			"from": "ECE 3040",
 			"to": "BMED 4784",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3310",
-			"to": "BMED 4757",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2310",
-			"to": "BMED 4602",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3610",
-			"to": "BMED 4602",
 			"arrows": "to"
 		},
 		{
@@ -8161,11 +5886,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BMED 3100",
-			"to": "BMED 4740",
-			"arrows": "to"
-		},
-		{
 			"from": "BMED 4751",
 			"to": "BMED 4740",
 			"arrows": "to"
@@ -8173,31 +5893,6 @@ var edges =
 		{
 			"from": "PHYS 2211",
 			"to": "BMED 4740",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 4602",
-			"to": "BMED 4603",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3600",
-			"to": "BMED 4477",
-			"arrows": "to"
-		},
-		{
-			"from": "CEE 3770",
-			"to": "BMED 4477",
-			"arrows": "to"
-		},
-		{
-			"from": "ISYE 3770",
-			"to": "BMED 4477",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 2400",
-			"to": "BMED 4477",
 			"arrows": "to"
 		},
 		{
@@ -8216,11 +5911,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BC 4130",
-			"to": "BC 4630",
-			"arrows": "to"
-		},
-		{
 			"from": "APPH 3753",
 			"to": "BIOL 3755",
 			"arrows": "to"
@@ -8228,11 +5918,6 @@ var edges =
 		{
 			"from": "ARCH 3231",
 			"to": "ARCH 4240",
-			"arrows": "to"
-		},
-		{
-			"from": "BMED 3610",
-			"to": "BMED 4500",
 			"arrows": "to"
 		},
 		{
@@ -8321,16 +6006,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BIOL 1511",
-			"to": "BIOL 1521",
-			"arrows": "to"
-		},
-		{
-			"from": "BIOL 1510",
-			"to": "BIOL 1521",
-			"arrows": "to"
-		},
-		{
 			"from": "BIOL 1510",
 			"to": "BIOL 4471",
 			"arrows": "to"
@@ -8342,11 +6017,6 @@ var edges =
 		},
 		{
 			"from": "BIOL 1520",
-			"to": "BIOL 4471",
-			"arrows": "to"
-		},
-		{
-			"from": "BIOL 1521",
 			"to": "BIOL 4471",
 			"arrows": "to"
 		},
@@ -8386,11 +6056,6 @@ var edges =
 			"arrows": "to"
 		},
 		{
-			"from": "BMED 3110",
-			"to": "BMED 4750",
-			"arrows": "to"
-		},
-		{
 			"from": "ECE 3741",
 			"to": "BMED 3500",
 			"arrows": "to"
@@ -8417,11 +6082,6 @@ var edges =
 		},
 		{
 			"from": "BIOL 1520",
-			"to": "APPH 3753",
-			"arrows": "to"
-		},
-		{
-			"from": "BIOL 1521",
 			"to": "APPH 3753",
 			"arrows": "to"
 		},

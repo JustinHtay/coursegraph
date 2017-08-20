@@ -17,6 +17,12 @@ function makeGraph(varargin)
         data = loadjson(dataName);
     end
     disp('Making nodes...')
+    %position configuration
+    rad = 1900; % radius
+    cx = 2000; %center of circle
+    cy = 2000;
+    max_num = 5000; %maximum class number, can be changed
+    %other variables
     ind = [];
     level = [];
     nodes = {};
@@ -24,7 +30,7 @@ function makeGraph(varargin)
     %iterate through the data
     for x = 1:length(data)
         %separate school and number, i.e strtok('ECE 2026')
-        [group, num] = strtok(data{x}.identifier);
+        [~, num] = strtok(data{x}.identifier);
         %If it's any of the things in line 25, hasn't been offered (so it
         %doesn't have a section field), has an X in the number (i.e a
         %transfer course), is a graduate class (number > 5k), or isn't
@@ -38,6 +44,7 @@ function makeGraph(varargin)
             check = any(myContains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
         end
         if  check ...
+            || ~strcmp(data{x}.grade_basis, 'ALP') ...    
             || ~isfield(data{x}, 'sections') ...
             || any(num == 'X') ...
             || str2num(num(2:5)) > 5000 ...
@@ -46,10 +53,16 @@ function makeGraph(varargin)
             ind = [ind, x];
         else
             nodes = [nodes, data{x}.identifier];
-            level = [level, num(2)];
         end
-        groups = [groups, group]; %#ok<*AGROW>
     end
+    %Try to calculate the positions of all the nodes.
+    groups = cellfun(@strtok, nodes, 'UniformOutput', false);
+    nums = cellfun(@(x) str2num(x(x >= '0' & x <= '9')), nodes, 'UniformOutput', false);
+    uniqueGroups = unique(groups);
+    count = cellfun(@(x) strcmp(x, groups), uniqueGroups, 'UniformOutput', false);
+    count = cellfun(@sum, count); %number of classes for each school
+    angle = 2 * pi * count / sum(count);
+    
     %Write the node data to the nodeName file
     fhin = fopen(dataName);
     fhout = fopen(nodeName, 'w');
@@ -62,8 +75,16 @@ function makeGraph(varargin)
         %characters, write it. Include the group and level fields.
         if all(ind-linenum ~= 0)
             if length(line) > 20
-                line = [line(1:end-4), ', "group": ', '"', groups{linenum}, '"',  ', "level": ', '"', level(1), '"',line(end-3:end)];
-                level(1) = [];
+                %calculate position
+                pos = find(strcmp(groups{1}, uniqueGroups));
+                myAngle = sum(angle(1:pos-1)) + mod(nums{1}, 1000);
+                myX = cx + cos(myAngle) * rad * floor(nums{1}/1000) / 4;
+                myY = cy + sin(myAngle) * rad * floor(nums{1} / 1000) / 4;
+                %print
+                line = [line(1:end-4), ', "x": ', '"', num2str(myX), '"', ', "y": ', '"', num2str(myY), '"',...
+                    ', "group": ', '"', groups{1}, '"',  ', "level": ', '"', num2str(floor(nums{1} / 1000)), '"',line(end-3:end)];
+                groups(1) = [];
+                nums(1) = [];
             end
             fprintf(fhout, line);
         end
