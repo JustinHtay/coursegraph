@@ -81,7 +81,7 @@
    var schools = [];
    for(var i = 0; i < nodes.length; i++) {
       //nodes[i]["level"] = nodes[i].group;
-      nodes[i]["title"] = nodes[i].id;
+      nodes[i]["label"] = nodes[i].id;
       if(schools.indexOf(nodes[i].group) == -1) {
          schools.push(nodes[i].group);
       }

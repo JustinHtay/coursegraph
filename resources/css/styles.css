@@ -9,3 +9,6 @@
    max-height: 180px;
    overflow-x:hidden;
 }
+div.vis-tooltip {
+   white-space:pre-line;
+}

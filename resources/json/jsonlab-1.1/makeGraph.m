@@ -135,7 +135,7 @@ global nodes
                 ys(end+1) = myY;
                 %print
                 try
-                line = [line(1:end-4),', "label": "', reqs{1},'", "x": ', '"', num2str(myX), '"', ', "y": ', '"', num2str(myY), '"',...
+                line = [line(1:end-4),', "title": "', reqs{1},'", "x": ', '"', num2str(myX), '"', ', "y": ', '"', num2str(myY), '"',...
                     ', "group": ', '"', groups{1}, '"',  ', "level": ', '"', num2str(level(1)), '"',line(end-3:end)];
                 catch
                     a = 1;
@@ -160,7 +160,7 @@ end
 %allprereq returns a cell array containing the prerequisites of the input
 %structure
 function [out, str] = allprereq(ca)
-global nodes
+%global nodes
     out = {};
     str = '(';
     join = ca.type;
@@ -171,10 +171,8 @@ global nodes
             out = [out, down];
             str = [str,' ',join,' ', substr];
         else
-            if ismember(ca{x}, nodes)
             out = [out, ca{x}];
             str = [str,' ',join,' ', ca{x}];
-            end
         end
         if x == 1 && length(str) > 6
             str(2:3+length(join)) = [];
