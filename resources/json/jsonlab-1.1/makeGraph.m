@@ -4,6 +4,7 @@
 %v1.0: 8/15/17
 
 function makeGraph(varargin)
+global nodes
     nodeName = varargin{1};
     edgeName = varargin{2};
     dataName = varargin{3};
@@ -18,14 +19,15 @@ function makeGraph(varargin)
     end
     disp('Making nodes...')
     %position configuration
-    rad = 9500; % radius
-    cx = 10000; %center of circle
-    cy = 10000;
+    rad = 14500; % radius
+    cx = 15000; %center of circle
+    cy = 15000;
     %other variables
     ind = [];
     xs = [];
     ys = [];
     nodes = {};
+    reqs = {};
     %iterate through the data
     for x = 1:length(data)
         %separate school and number, i.e strtok('ECE 2026')
@@ -42,9 +44,6 @@ function makeGraph(varargin)
         catch
             check = any(myContains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
         end
-        if isequal(test, 'LMC')
-           a = 1; 
-        end
         if  check ...
             || ~(any(data{x}.grade_basis == 'A') || any(data{x}.grade_basis == 'L')) ...    
             || ~isfield(data{x}, 'sections') ...
@@ -55,9 +54,50 @@ function makeGraph(varargin)
             || sum(strcmpi(data{x}.identifier, nodes) ~= 0)
             ind = [ind, x];
         else
-            nodes = [nodes, data{x}.identifier];
+             nodes = [nodes, data{x}.identifier];
+%             listreq = {data{x}.fullname};
+%             if any(strcmp(fieldnames(data{x}),'prerequisites'))
+%                 [~, listreq] = allprereq(data{x}.prerequisites);
+%                 listreq = [data{x}.fullname, '\\n', listreq];
+%             end
+%             reqs = [reqs, listreq];
         end
     end
+
+    vec = 1:length(data);
+    %delete the unused data
+    data(ismember(vec, ind)) = [];
+    % time to make the edges
+    disp('Making edges...')
+        edges = [];
+    for x = 1:length(data)
+        %if the data is a node and has prereqs
+        st = data{x};
+        listreq = {data{x}.fullname};
+        if any(strcmp(fieldnames(st),'prerequisites')) && ismember(st.identifier, nodes)
+            %get all prereqs, and delete the prereqs that aren't nodes
+            [prereqs, listreq] = allprereq(st.prerequisites);
+            prereqs(~ismember(prereqs, nodes)) = [];
+            if(listreq(end-3:end-1) == '\\n')
+                listreq(end-3:end-1) = [];
+            end
+            listreq = [data{x}.fullname, '\\n', listreq];
+            %iterate to save each edge as a 1x2 cell array
+            for y = 1:length(prereqs)
+                edges = [edges; {st.identifier, prereqs{y}}];
+            end
+        end
+        reqs = [reqs, listreq];
+    end
+    %create a structure of all the arrows
+    json = struct('from', edges(:,2), 'to', edges(:,1), 'arrows', 'to');
+    %stringify the structure and print it to file
+    strjson = savejson('', json);
+    strjson = ['var edges = ', strjson(2:end-3), ';'];
+    fh = fopen(edgeName, 'w');
+    fprintf(fh, strjson);
+    fclose(fh);
+    
     %Try to calculate the positions of all the nodes.
     groups = cellfun(@strtok, nodes, 'UniformOutput', false);
     nums = cell2mat(cellfun(@(x) str2num(x(x >= '0' & x <= '9')), nodes, 'UniformOutput', false));
@@ -94,10 +134,16 @@ function makeGraph(varargin)
                 xs(end+1) = myX;
                 ys(end+1) = myY;
                 %print
-                line = [line(1:end-4), ', "x": ', '"', num2str(myX), '"', ', "y": ', '"', num2str(myY), '"',...
-                    ', "group": ', '"', groups{1}, '"',  ', "level": ', '"', level(1), '"',line(end-3:end)];
+                try
+                line = [line(1:end-4),', "label": "', reqs{1},'", "x": ', '"', num2str(myX), '"', ', "y": ', '"', num2str(myY), '"',...
+                    ', "group": ', '"', groups{1}, '"',  ', "level": ', '"', num2str(level(1)), '"',line(end-3:end)];
+                catch
+                    a = 1;
+                end
+                
                 groups(1) = [];
                 nums(1) = [];
+                reqs(1) = [];
             end
             fprintf(fhout, line);
         end
@@ -107,47 +153,34 @@ function makeGraph(varargin)
     fprintf(fhout, ';');
     fclose(fhin);
     fclose(fhout);
-    vec = 1:length(data);
-    %delete the data that wasn't written
-    data(ismember(vec, ind)) = [];
-    % time to make the edges
-    disp('Making edges...')
-        edges = [];
-    for x = 1:length(data)
-        %if the data is a node and has prereqs
-        st = data{x};
-        if any(strcmp(fieldnames(st),'prerequisites')) && ismember(st.identifier, nodes)
-            %get all prereqs, and delete the prereqs that aren't nodes
-            prereqs = allprereq(st.prerequisites.courses);
-            prereqs(~ismember(prereqs, nodes)) = [];
-            %iterate to save each edge as a 1x2 cell array
-            for y = 1:length(prereqs)
-                edges = [edges; {st.identifier, prereqs{y}}];
-            end
-        end       
-    end
-    %create a structure of all the arrows
-    json = struct('from', edges(:,2), 'to', edges(:,1), 'arrows', 'to');
-    %stringify the structure and print it to file
-    strjson = savejson('', json);
-    strjson = ['var edges = ', strjson(2:end-3), ';'];
-    fh = fopen(edgeName, 'w');
-    fprintf(fh, strjson);
-    fclose(fh);
+    
     plot(xs,ys, '*')
 end
 
 %allprereq returns a cell array containing the prerequisites of the input
 %structure
-function out = allprereq(ca)
+function [out, str] = allprereq(ca)
+global nodes
     out = {};
+    str = '(';
+    join = ca.type;
+    ca = ca.courses;
     for x = 1:length(ca)
         if isstruct(ca{x})
-            out = [out, allprereq(ca{x}.courses)];
+            [down, substr] = allprereq(ca{x});
+            out = [out, down];
+            str = [str,' ',join,' ', substr];
         else
+            if ismember(ca{x}, nodes)
             out = [out, ca{x}];
+            str = [str,' ',join,' ', ca{x}];
+            end
+        end
+        if x == 1 && length(str) > 6
+            str(2:3+length(join)) = [];
         end
     end
+    str = [str, ')\\n'];
 end
 % overwrite contains() for MATLAB versions below 2017
 function out = myContains(word, ca)

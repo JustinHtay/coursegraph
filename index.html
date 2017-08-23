@@ -75,14 +75,13 @@
 <div class="network" id="mynetwork"></div>
 <script type="text/javascript">
    nodes = JSON.stringify(nodes);
-   nodes = nodes.split("\"fullname\":").join("\"title\":");
    nodes = nodes.split("\"identifier\":").join("\"id\":");
    //nodes = nodes.split("\"school\":").join("\"group\":");
    nodes = JSON.parse(nodes);
    var schools = [];
    for(var i = 0; i < nodes.length; i++) {
       //nodes[i]["level"] = nodes[i].group;
-      nodes[i]["label"] = nodes[i].id;
+      nodes[i]["title"] = nodes[i].id;
       if(schools.indexOf(nodes[i].group) == -1) {
          schools.push(nodes[i].group);
       }
