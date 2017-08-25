@@ -78,9 +78,7 @@ global nodes
             %get all prereqs, and delete the prereqs that aren't nodes
             [prereqs, listreq] = allprereq(st.prerequisites);
             prereqs(~ismember(prereqs, nodes)) = [];
-            if(listreq(end-3:end-1) == '\\n')
-                listreq(end-3:end-1) = [];
-            end
+            listreq = strrep(listreq, ')\\n)', '))');
             listreq = [data{x}.fullname, '\\n', listreq];
             %iterate to save each edge as a 1x2 cell array
             for y = 1:length(prereqs)
@@ -160,24 +158,37 @@ end
 %allprereq returns a cell array containing the prerequisites of the input
 %structure
 function [out, str] = allprereq(ca)
-%global nodes
+global nodes
     out = {};
     str = '(';
     join = ca.type;
     ca = ca.courses;
     for x = 1:length(ca)
+        substr = [];
         if isstruct(ca{x})
             [down, substr] = allprereq(ca{x});
             out = [out, down];
-            str = [str,' ',join,' ', substr];
-        else
+        elseif ismember(ca{x}, nodes)
             out = [out, ca{x}];
-            str = [str,' ',join,' ', ca{x}];
+            substr = ca{x};
         end
+        if ~isempty(substr)
+            str = [str, ' ', join, ' '];
+        end
+        str = [str, substr];
         if x == 1 && length(str) > 6
             str(2:3+length(join)) = [];
         end
     end
+    parts = strsplit(str);
+    if length(str) > 1 && any(strcmp(parts{2}, {'and', 'or'}))
+        parts(2) = [];
+        str = strjoin(parts);
+        str(2) = [];
+    else
+        str = strjoin(parts);
+    end
+    
     str = [str, ')\\n'];
 end
 % overwrite contains() for MATLAB versions below 2017
@@ -186,5 +197,24 @@ function out = myContains(word, ca)
     for x = 1:length(ca)
        newword = strrep(word, ca{x}, char(0));
        out = [out, ~isequal(newword, word)]; 
+    end
+end
+
+function str = stripNewLine(str)
+    if length(str) > 5
+        count = 1;
+        vec = [];
+        for x = 2:length(str)-2
+            if isequal(str(x:x+2), '\\n') && count > 1
+                vec = [vec,x];
+            elseif str(x) == '('
+                count = count+1;
+            elseif str(x) == ')'
+                count = count - 1;
+            end
+        end
+        for x = 1:3
+            str(vec) = [];
+        end
     end
 end
