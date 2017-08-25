@@ -41,9 +41,9 @@ global nodes
         %pre-2017 versions of MATLAB don't have contains(), so I wrote my
         %own. I assume that MATLAB's version is better, so I default to it
         try
-            check = any(contains(data{x}.fullname,{'Spec Prob','Spec Topics', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
+            check = any(contains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
         catch
-            check = any(myContains(data{x}.fullname,{'Spec Prob', 'Spec Topics','Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
+            check = any(myContains(data{x}.fullname,{'Spec Prob', 'Special Topics', 'Special Problems', 'Undergrad', 'Graduate', 'Research', 'Seminar'}));
         end
         if  check ...
             || ~(any(data{x}.grade_basis == 'A') || any(data{x}.grade_basis == 'L')) ...    
@@ -155,7 +155,7 @@ global nodes
     fprintf(fhout, ';');
     fclose(fhin);
     fclose(fhout);
-    makeGroups(uniqueGroups);
+    
     plot(xs,ys, '*')
 end
 
@@ -205,20 +205,17 @@ function out = myContains(word, ca)
 end
 
 function makeGroups(groups)
-disp('Making groups...')
     addpath(genpath('./distinguishable_colors'));
     colors = round(255 * distinguishable_colors(length(groups)));
     fh = fopen('groups.js', 'w');
     str = 'var groups = {\n';
     for pos = 1:length(groups)
-        if sum(colors(pos, :)) < 100
-            colors(pos,:) = colors(pos, :) + 100;
+        if sum(colors(:, pos)) < 50
+            colors(:,pos) = colors(:,pos) + 50;
         end
         myColor = sprintf('rgba(%d,%d,%d,1)', colors(pos,1), colors(pos,2), colors(pos,3));
-        str = [str, sprintf('%s: {"color": "%s"},\n', groups{pos}, myColor)];
+        str = [str, sprintf(fh, '%s: {color: %s},')
     end
-    str(end-1) = [];
-    str = [str, '};'];
-    fprintf(fh,str);
-    fclose(fh);
+    
+    
 end
