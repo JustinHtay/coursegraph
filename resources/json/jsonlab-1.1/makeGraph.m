@@ -79,6 +79,7 @@ global nodes
             [prereqs, listreq] = allprereq(st.prerequisites);
             prereqs(~ismember(prereqs, nodes)) = [];
             listreq = strrep(listreq, ')\\n)', '))');
+            listreq = strrep(listreq, '()\\n', '');
             listreq = [data{x}.fullname, '\\n', listreq];
             %iterate to save each edge as a 1x2 cell array
             for y = 1:length(prereqs)
