@@ -14,6 +14,7 @@
    <script type="text/javascript" src="./resources/js/util.js"></script>
    <script type="text/javascript" src="./resources/js/all_edges.js"></script>
    <script type="text/javascript" src="./resources/js/all_nodes.js"></script>
+   <script type="text/javascript" src="./resources/js/groups.js"></script>
    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
    
    <!-- Bootstrap Stuff -->
@@ -75,7 +76,6 @@
 <div class="network" id="mynetwork"></div>
 <script type="text/javascript">
    nodes = JSON.stringify(nodes);
-   nodes = nodes.split("\"fullname\":").join("\"title\":");
    nodes = nodes.split("\"identifier\":").join("\"id\":");
    //nodes = nodes.split("\"school\":").join("\"group\":");
    nodes = JSON.parse(nodes);
@@ -112,6 +112,7 @@
             type: "curvedCW"
          }
       },
+	  groups: groups,
       physics: false
    };
    var network;
