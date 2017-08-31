@@ -9,7 +9,6 @@ global nodes
     edgeName = varargin{2};
     dataName = varargin{3};
     addpath(genpath('./jsonlab'));
-    
     %Load the data in, either as a .mat file or as a .json file
     disp('Loading Data...')
     try
@@ -207,7 +206,9 @@ end
 function makeGroups(groups)
 disp('Making groups...')
     addpath(genpath('./distinguishable_colors'));
-    colors = round(255 * distinguishable_colors(length(groups)));
+    addpath(genpath('./linspecer'));
+    colors = round(255 * linspecer(length(groups)));
+    %colors = round(255 * distinguishable_colors(length(groups)));
     fh = fopen('groups.js', 'w');
     str = 'var groups = {\n';
     for pos = 1:length(groups)

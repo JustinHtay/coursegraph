@@ -84,17 +84,17 @@ function matchCourseSearch() {
    var input = document.getElementById("courseSearch").value.toUpperCase();
    var matches = [];
    if(!schoolSelected) {
-   for(var nodeId in allNodes) {
-      if((allNodes[nodeId].title).toUpperCase().indexOf(input) > -1) {
-         matches.push(nodeId);
+      for(var nodeId in allNodes) {
+         if((allNodes[nodeId].fullname).toUpperCase().indexOf(input) > -1) {
+            matches.push(nodeId);
+         }
       }
-   }
    } else {
-   for(var nodeId in tempNodes) {
-      if((tempNodes[nodeId].title).toUpperCase().indexOf(input) > -1) {
-         matches.push(nodeId);
+      for(var nodeId in tempNodes) {
+         if((tempNodes[nodeId].fullname).toUpperCase().indexOf(input) > -1) {
+            matches.push(nodeId);
+         }
       }
-   }
    }
    if(matches.length == 1) {
       network.focus(matches[0], {scale:1.0}); 
@@ -137,7 +137,7 @@ function makeCourseSelect(allNodes) {
    for(var nodeId in allNodes) {
       var opt = allNodes[nodeId].id;
       var li = document.createElement("li");
-      var text = document.createTextNode(allNodes[nodeId].title);
+      var text = document.createTextNode(allNodes[nodeId].fullname);
       var link = document.createElement("a");
       var fcn = "javascript:network.focus(\"" + nodeId + "\", {scale:1.0}); highlightNode(\"" + nodeId + "\");"; 
       link.href = fcn;
