@@ -207,8 +207,8 @@ function makeGroups(groups)
 disp('Making groups...')
     addpath(genpath('./distinguishable_colors'));
     addpath(genpath('./linspecer'));
-    colors = round(255 * linspecer(length(groups)));
-    %colors = round(255 * distinguishable_colors(length(groups)));
+    %colors = round(255 * linspecer(length(groups)));
+    colors = round(255 * distinguishable_colors(length(groups), 'w'));
     fh = fopen('groups.js', 'w');
     str = 'var groups = {\n';
     for pos = 1:length(groups)
