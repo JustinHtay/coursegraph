@@ -25,11 +25,22 @@
    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"> 
 </head>
 <body>
-
-<p>
-   Welcome to CourseGraph! Please search for a class or explore the graph to find the classes you're looking for!
-</p>
+<nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+      <div class="navbar-header">
+         <a class="navbar-brand" href="index.html">CourseGraph</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="about.html">About</a></li>
+      </ul>
+   </div>
+</nav>
 <div class="container-fluid">
+   <div class="tab-content">
+   <p>
+      Welcome to CourseGraph! Please search for a class or explore the graph to find the classes you're looking for!
+   </p>
+   </div>
    <div class="row"> <!-- select a school -->
       <div class="col-xs-6">
          <div class="input-group dropdown" id="schoolBlock">
@@ -73,7 +84,14 @@
       </div>
       </div> <!-- end select a class -->
 </div>
-<div class="network" id="mynetwork"></div>
+<div class="container-fluid">
+   <div class="network" id="mynetwork"></div>
+</div>
+<div class="container-fluid footer">
+   <footer class="container-fluid content text-center small">
+		Find this project on <a href=https://github.com/JustinHtay/coursegraph>Github</a>! Feel free to fork the repo with any improvements you have!
+   </footer>
+</div>
 <script type="text/javascript">
    nodes = JSON.stringify(nodes);
    nodes = nodes.split("\"identifier\":").join("\"id\":");
@@ -121,7 +139,5 @@
    var highlightActive = false;
    draw(nodeSet, edgeSet); 
 </script>
-
-
 </body>
 </html>
